@@ -1,0 +1,224 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Bidding & Draft Rules - PPL Pakistan</title>
+    <meta name="description" content="Rules and process for player bidding and drafting in the Premier Padel League (PPL) Pakistan" />
+    <meta name="author" content="Premier Padel League" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Player Bidding & Draft Rules - PPL Pakistan" />
+    <meta property="og:description" content="Rules and process for player bidding and drafting in the Premier Padel League (PPL) Pakistan" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <link rel="stylesheet" href="player-bidding_style.css">
+  </head>
+  <body>
+    <div id="root">
+      <nav class="navbar">
+        <div class="container navbar-container">
+          <div class="logo-container">
+            <img src="../assets/ppl-logo.png" alt="PPL Logo" />
+            <div class="logo-text">
+              <h1 class="glow-text">PPL</h1>
+              <p>Premier Padel League</p>
+            </div>
+          </div>
+          <div class="nav-links">
+            <button data-href="../index.html#home">Home<span></span></button>
+            <button data-href="../index.html#club-bidding">Club Bidding<span></span></button>
+            <button data-href="../index.html#player-bidding">Player Bidding<span></span></button>
+            <button data-href="../index.html#format">League Format<span></span></button>
+            <button data-href="../index.html#cities">Cities<span></span></button>
+            <button data-href="../index.html#contact">Contact<span></span></button>
+          </div>
+          <button id="mobile-menu-button" class="mobile-menu-button btn btn-outline" title="Toggle mobile menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div id="mobile-menu" class="mobile-menu container" role="navigation">
+          <div class="flex-col">
+            <button data-href="../index.html#home">Home</button>
+            <button data-href="../index.html#club-bidding">Club Bidding</button>
+            <button data-href="../index.html#player-bidding">Player Bidding</button>
+            <button data-href="../index.html#format">League Format</button>
+            <button data-href="../index.html#cities">Cities</button>
+            <button data-href="../index.html#contact">Contact</button>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <section id="player-bidding" class="hero-section">
+          <div class="container">
+            <h1 class="hero-title"><span class="hero-title-first">PLAYER BIDDING</span><span class="hero-title-second">& DRAFT RULES</span></h1>
+            <p class="hero-subtitle">How Clubs Build Their Championship Squads</p>
+          </div>
+        </section>
+        <section id="bidding-details">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="gradient-text">Player Bidding Process</h2>
+              <p>Understand the rules and steps for drafting players in the Premier Padel League</p>
+            </div>
+            <div class="grid">
+              <div class="card">
+                <div class="card-header">
+                  <span class="card-icon">💰</span>
+                  <h3 class="card-title">Rewards and Incentives</h3>
+                </div>
+                <div class="card-content">
+                  <p>All selected players receive a monthly engagement allowance and additional travel allowance.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <span class="card-icon">📝</span>
+                  <h3 class="card-title">Player Registration</h3>
+                </div>
+                <div class="card-content">
+                  <ul>
+                    <li>Open to players aged 16+</li>
+                    <li>Register via official form with CNIC, contact, and short video</li>
+                    <li>Registration Fee: PKR 5,000 (non-refundable)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <span class="card-icon">🏆</span>
+                  <h3 class="card-title">Player Evaluation & Categories</h3>
+                </div>
+                <div class="card-content">
+                  <p>Trials held after club bidding. Players categorized as:</p>
+                  <table class="bidding-table">
+                    <tr><th>Category</th><th>Level</th><th>Base Price (PKR)</th></tr>
+                    <tr><td>Alpha</td><td>Professional</td><td>80,000</td></tr>
+                    <tr><td>Bravo</td><td>Strong Amateur</td><td>50,000</td></tr>
+                    <tr><td>Charlie</td><td>Intermediate</td><td>30,000</td></tr>
+                  </table>
+                  <p>Final player list shared with clubs before auction.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <span class="card-icon">🎯</span>
+                  <h3 class="card-title">Live Player Bidding</h3>
+                </div>
+                <div class="card-content">
+                  <p>Conducted as a live auction (venue TBD). Highest bidder wins after 10 seconds of no new bids. Players sign with winning club immediately.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <span class="card-icon">📜</span>
+                  <h3 class="card-title">Contracts & Payments</h3>
+                </div>
+                <div class="card-content">
+                  <ul>
+                    <li>1-season contract supervised by PPL</li>
+                    <li>Payment: 50% before first match, 50% after league end</li>
+                    <li>Unsold players move to Reserve Pool</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <span class="card-icon">🔍</span>
+                  <h3 class="card-title">Transparency</h3>
+                </div>
+                <div class="card-content">
+                  <ul>
+                    <li>Auction recorded or live-streamed</li>
+                    <li>No private signings without PPL approval</li>
+                    <li>All franchises follow league’s code of conduct</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card important-note-card">
+                <div class="card-content text-center">
+                  <h3 class="card-title">Key Dates</h3>
+                  <ul>
+                    <li>Registration: 1 Nov - 30 Nov 2025</li>
+                    <li>Trials: 1 Dec - 7 Dec 2025</li>
+                    <li>Category Finalization: 8 Dec - 10 Dec 2025</li>
+                    <li>Auction: 12 Dec - 15 Dec 2025</li>
+                    <li>League Start: 1 Jan 2026</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card contact-card">
+              <div class="card-content text-center">
+                <h3 class="card-title">Contact Information</h3>
+                <p>Email: <a href="mailto:basim.ahmed@theboysand.co" class="gradient-text contact-email">basim.ahmed@theboysand.co</a></p>
+                <p>Phone: <a href="tel:+923200004141" class="gradient-text">03200004141</a></p>
+                <p>Location: Rawalpindi | Islamabad</p>
+                <a href="mailto:basim.ahmed@theboysand.co" class="btn btn-primary">Get in Touch <span class="arrow">→</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container footer-container">
+          <div class="logo-container">
+            <img src="../assets/ppl-logo.png" alt="PPL Logo" class="footer-logo" />
+            <div>
+              <h3 class="font-orbitron font-bold text-lg glow-text">PPL</h3>
+              <p class="text-xs text-muted-foreground font-rajdhani">Premier Padel League</p>
+            </div>
+          </div>
+          <div class="text-center">
+            <p>© 2025 Premier Padel League. All rights reserved.</p>
+            <p>Bringing world-class padel to Pakistan</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

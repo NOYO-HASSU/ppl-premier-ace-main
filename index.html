@@ -1,27 +1,446 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Premier Padel League - PPL Pakistan</title>
-    <meta name="description" content="Premier Padel League - Pakistan's premier padel tournament featuring clubs from Lahore, Karachi, and Islamabad/Rawalpindi" />
+    <meta name="description"
+        content="Premier Padel League - Pakistan's premier padel tournament featuring clubs from Lahore, Karachi, and Islamabad/Rawalpindi" />
     <meta name="author" content="Premier Padel League" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <meta property="og:title" content="Premier Padel League - PPL Pakistan" />
-    <meta property="og:description" content="Pakistan's premier padel tournament featuring clubs from Lahore, Karachi, and Islamabad/Rawalpindi" />
+    <meta property="og:description"
+        content="Pakistan's premier padel tournament featuring clubs from Lahore, Karachi, and Islamabad/Rawalpindi" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="root">
+        <nav class="navbar">
+            <div class="container navbar-container">
+                <div class="logo-container">
+                    <img src="assets/ppl-logo.png" alt="PPL Logo" />
+                    <div class="logo-text">
+                        <h1 class="glow-text">PPL</h1>
+                        <p>Premier Padel League</p>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <button data-href="#home">Home<span></span></button>
+                    <button data-href="#club-bidding">Club Bidding<span></span></button>
+                    <button data-href="#player-bidding">Player Bidding<span></span></button>
+                    <button data-href="#format">League Format<span></span></button>
+                    <button data-href="#cities">Cities<span></span></button>
+                    <button data-href="#contact">Contact<span></span></button>
+                </div>
+                <button id="mobile-menu-button" class="mobile-menu-button btn btn-outline" title="Toggle mobile menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor">
+                        <line x1="4" x2="20" y1="12" y2="12" />
+                        <line x1="4" x2="20" y1="6" y2="6" />
+                        <line x1="4" x2="20" y1="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="mobile-menu container" role="navigation">
+                <div class="flex-col">
+                    <button data-href="#home">Home</button>
+                    <button data-href="#club-bidding">Club Bidding</button>
+                    <button data-href="#player-bidding">Player Bidding</button>
+                    <button data-href="#format">League Format</button>
+                    <button data-href="#cities">Cities</button>
+                    <button data-href="#contact">Contact</button>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <section id="home" class="hero-section">
+                <div class="container">
+                    <img src="assets/ppl-logo.png" alt="PPL Logo" class="hero-logo glow-card rounded-full" />
+                    <h1 class="hero-title"><span class="hero-title-first">PREMIER PADEL</span><span
+                            class="hero-title-second">LEAGUE</span></h1>
+                    <p class="hero-subtitle">Pakistan's Elite Padel Championship</p>
+                    <div class="hero-badges">
+                        <div class="hero-badge"><span>🏆 3 Categories</span></div>
+                        <div class="hero-badge"><span>18 Clubs</span></div>
+                        <div class="hero-badge"><span>3 Cities</span></div>
+                    </div>
+                    <div class="hero-buttons flex flex-col sm:flex-row justify-center items-center">
+                        <a href="#contact" class="btn btn-primary">Get Started <span class="arrow">→</span></a>
+                        <a href="#format" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </section>
+            <section id="club-bidding">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="gradient-text">Club Bidding Rules</h2>
+                        <p>How clubs secure their place in Pakistan's premier padel competition</p>
+                    </div>
+                    <div class="grid">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-icon">📋</span>
+                                <h3 class="card-title">Club Registration</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>All participating clubs must register before the bidding deadline with valid
+                                    documentation.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-icon">💰</span>
+                                <h3 class="card-title">Bidding Process</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Clubs submit sealed bids for their preferred category. Highest bids secure spots in
+                                    Alpha category.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-icon">⏱️</span>
+                                <h3 class="card-title">Timeline</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Bidding opens 60 days before league start and closes 30 days prior. Winners announced
+                                    within 48 hours.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-icon">✓</span>
+                                <h3 class="card-title">Category Assignment</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Top 6 bids get Alpha, next 6 get Bravo, and final 6 get Charlie category placement.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card important-note-card">
+                        <div class="card-content text-center">
+                            <h3 class="card-title">Important Note</h3>
+                            <p>All clubs must comply with PPL regulations and maintain fair play standards throughout
+                                the bidding process. Any violation may result in disqualification and forfeiture of
+                                registration fees.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="player-bidding">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="gradient-text">Player Bidding Instructions</h2>
+                        <p>How clubs draft their championship-winning squads</p>
+                    </div>
+                    <div class="grid">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-icon">👥</span>
+                                <h3 class="card-title">Player Pool</h3>
+                                <span class="card-badge">Open Registration</span>
+                            </div>
+                            <div class="card-content">
+                                <p>All registered players enter a centralized pool. Players are categorized by skill
+                                    level and experience.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-icon">🎯</span>
+                                <h3 class="card-title">Auction Format</h3>
+                                <span class="card-badge">Live Bidding</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Clubs bid on players in real-time auction. Each club has a fixed budget to build
+                                    their squad.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-icon">👨‍💼</span>
+                                <h3 class="card-title">Squad Building</h3>
+                                <span class="card-badge">Strategic Planning</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Clubs must maintain roster size limits. Minimum and maximum player requirements per
+                                    category.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-icon">📈</span>
+                                <h3 class="card-title">Price Caps</h3>
+                                <span class="card-badge">Fair Competition</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Base price and maximum bid limits apply. Salary cap ensures competitive balance
+                                    across all clubs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card stat-primary">
+                            <div class="stat-value">8-12</div>
+                            <div class="stat-label">Players per Squad</div>
+                        </div>
+                        <div class="stat-card stat-accent">
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">Rounds of Bidding</div>
+                        </div>
+                        <div class="stat-card stat-secondary">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Transparent Process</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="format">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="gradient-text">League Format</h2>
+                        <p>Three competitive categories, 18 clubs, one ultimate champion</p>
+                    </div>
+                    <div class="grid grid-lg-3">
+                        <div class="card format-card format-alpha">
+                            <div class="format-icon">🏆</div>
+                            <h3 class="card-title text-alpha">A - Alpha</h3>
+                            <p class="format-subtitle">Elite</p>
+                            <p class="format-description">Elite Category - Top 6 clubs compete for the ultimate
+                                championship title</p>
+                            <div class="format-stat">
+                                <div class="format-stat-number">6</div>
+                                <div class="format-stat-label">Clubs</div>
+                            </div>
+                        </div>
+                        <div class="card format-card format-beta">
+                            <div class="format-icon">💎</div>
+                            <h3 class="card-title text-primary">B - Bravo</h3>
+                            <p class="format-subtitle">Premier</p>
+                            <p class="format-description">Premier Category - High-level competitive play for
+                                championship contenders</p>
+                            <div class="format-stat">
+                                <div class="format-stat-number">6</div>
+                                <div class="format-stat-label">Clubs</div>
+                            </div>
+                        </div>
+                        <div class="card format-card format-charlie">
+                            <div class="format-icon">⭐</div>
+                            <h3 class="card-title text-accent">C - Charlie</h3>
+                            <p class="format-subtitle">Competitive</p>
+                            <p class="format-description">Competitive Category - Emerging clubs building towards
+                                greatness</p>
+                            <div class="format-stat">
+                                <div class="format-stat-number">6</div>
+                                <div class="format-stat-label">Clubs</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card competition-structure">
+                        <h3 class="card-title competition-title">Competition Structure</h3>
+                        <div class="competition-grid">
+                            <div class="competition-item">
+                                <span class="competition-marker">█</span>
+                                <div>
+                                    <strong>Round Robin:</strong> <span class="muted-text">All clubs within each
+                                        category play each other</span>
+                                </div>
+                            </div>
+                            <div class="competition-item">
+                                <span class="competition-marker finals">█</span>
+                                <div>
+                                    <strong>Finals:</strong> <span class="muted-text">Best-of-3 championship
+                                        matches</span>
+                                </div>
+                            </div>
+                            <div class="competition-item">
+                                <span class="competition-marker">█</span>
+                                <div>
+                                    <strong>Playoffs:</strong> <span class="muted-text">Top 4 teams from each category
+                                        advance</span>
+                                </div>
+                            </div>
+                            <div class="competition-item">
+                                <span class="competition-marker">█</span>
+                                <div>
+                                    <strong>Promotion:</strong> <span class="muted-text">Top Charlie teams can advance
+                                        to Bravo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="cities">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="gradient-text">Host Cities</h2>
+                        <p>Three iconic Pakistani cities unite for the ultimate padel experience</p>
+                    </div>
+                    <div class="grid grid-lg-3">
+                        <div class="card cities-card">
+                            <div class="cities-icon">🏛️</div>
+                            <h3 class="card-title text-center">Lahore</h3>
+                            <p class="text-center cities-description">The cultural capital hosts opening ceremonies and
+                                Alpha category finals</p>
+                            <div class="cities-info">
+                                <div class="cities-info-item">
+                                    <span class="cities-info-icon">📍</span>
+                                    <span>3 Premium Venues</span>
+                                </div>
+                                <div class="cities-info-item">
+                                    <span class="cities-info-icon">👥</span>
+                                    <span>2000+ Spectators</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card cities-card">
+                            <div class="cities-icon">🏙️</div>
+                            <h3 class="card-title text-center">Karachi</h3>
+                            <p class="text-center cities-description">Pakistan's largest city brings massive crowds and
+                                electric atmosphere</p>
+                            <div class="cities-info">
+                                <div class="cities-info-item">
+                                    <span class="cities-info-icon">📍</span>
+                                    <span>4 World-Class Courts</span>
+                                </div>
+                                <div class="cities-info-item">
+                                    <span class="cities-info-icon">👥</span>
+                                    <span>2500+ Spectators</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card cities-card">
+                            <div class="cities-icon">⛰️</div>
+                            <h3 class="card-title text-center">Islamabad/Rawalpindi</h3>
+                            <p class="text-center cities-description">Twin cities collaborate to host prestigious
+                                championship events</p>
+                            <div class="cities-info">
+                                <div class="cities-info-item">
+                                    <span class="cities-info-icon">📍</span>
+                                    <span>2 State-of-Art Facilities</span>
+                                </div>
+                                <div class="cities-info-item">
+                                    <span class="cities-info-icon">👥</span>
+                                    <span>1800+ Spectators</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card season-schedule">
+                        <div class="schedule-content">
+                            <div class="schedule-header">
+                                <span class="schedule-icon">📅</span>
+                                <h3 class="card-title">Season Schedule</h3>
+                            </div>
+                            <p class="schedule-description">Events rotate between cities throughout the season, ensuring
+                                every region experiences world-class padel action. Each city hosts multiple rounds with
+                                special championship events.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="gradient-text">Get In Touch</h2>
+                        <p>Have questions? Want to participate? We're here to help!</p>
+                    </div>
+                    <div class="card contact-main">
+                        <div class="contact-grid">
+                            <div class="contact-left">
+                                <div class="contact-item">
+                                    <span class="contact-icon">✉️</span>
+                                    <div class="contact-info">
+                                        <h4 class="contact-title">Email Us</h4>
+                                        <p class="contact-link">info@ppl.com.pk</p>
+                                        <p class="contact-description">General inquiries and support</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <span class="contact-icon">📞</span>
+                                    <div class="contact-info">
+                                        <h4 class="contact-title">Call Us</h4>
+                                        <p class="contact-link">+92-300-1234567</p>
+                                        <p class="contact-description">Mon-Fri, 9:00 AM - 6:00 PM PKT</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <span class="contact-icon">📍</span>
+                                    <div class="contact-info">
+                                        <h4 class="contact-title">Headquarters</h4>
+                                        <p class="contact-description">PPL Sports Complex<br />Lahore, Punjab, Pakistan
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-right">
+                                <div class="quick-links-card">
+                                    <h4 class="quick-links-title">Quick Links</h4>
+                                    <ul class="quick-links-list">
+                                        <li><span class="link-icon">📋</span> Club Registration Portal</li>
+                                        <li><span class="link-icon">👥</span> Player Database</li>
+                                        <li><span class="link-icon">📅</span> Event Calendar</li>
+                                        <li><span class="link-icon">🏆</span> League Standings</li>
+                                    </ul>
+                                </div>
+                                <div class="media-inquiries-card">
+                                    <h4 class="media-title">Media Inquiries</h4>
+                                    <p class="media-description">For press releases and media partnerships</p>
+                                    <p class="media-email">media@ppl.com.pk</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-action">
+                            <a href="mailto:info@ppl.com.pk" class="btn btn-primary send-message-btn">✈️ Send
+                                Message</a>
+                        </div>
+                    </div>
+                    <div class="social-section">
+                        <p class="social-text">Follow us for the latest updates and announcements</p>
+                        <div class="social-links">
+                            <a href="#" class="social-btn">Facebook</a>
+                            <a href="#" class="social-btn">Instagram</a>
+                            <a href="#" class="social-btn">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container footer-container">
+                <div class="logo-container">
+                    <img src="assets/ppl-logo.png" alt="PPL Logo" class="footer-logo" />
+                    <div>
+                        <h3 class="font-orbitron font-bold text-lg glow-text">PPL</h3>
+                        <p class="text-xs text-muted-foreground font-rajdhani">Premier Padel League</p>
+                    </div>
+                </div>
+                <div class="footer-center">
+                    <p>© 2025 Premier Padel League. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <p>Bringing world-class padel to Pakistan</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+
 </html>

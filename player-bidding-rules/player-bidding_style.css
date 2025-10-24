@@ -1,0 +1,447 @@
+/* style.css */
+
+/* Inherit design system from main style.css */
+:root {
+    --background: hsl(220, 30%, 5%);
+    --foreground: hsl(120, 100%, 95%);
+    --card: hsl(220, 25%, 8%);
+    --card-foreground: hsl(120, 100%, 95%);
+    --primary: hsl(142, 76%, 50%);
+    --primary-foreground: hsl(220, 30%, 5%);
+    --secondary: hsl(45, 100%, 60%);
+    --secondary-foreground: hsl(220, 30%, 5%);
+    --muted: hsl(220, 20%, 15%);
+    --muted-foreground: hsl(120, 20%, 65%);
+    --accent: hsl(175, 70%, 55%);
+    --accent-foreground: hsl(220, 30%, 5%);
+    --border: hsl(220, 20%, 18%);
+    --input: hsl(220, 20%, 18%);
+    --radius: 0.75rem;
+    --glow-primary: 142 76% 50%;
+    --glow-secondary: 175 70% 55%;
+}
+
+/* Base & Global Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background: linear-gradient(180deg, hsl(220 30% 5%), hsl(220 25% 8%));
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    letter-spacing: -0.025em;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+main {
+    display: block;
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 1rem;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.glow-text {
+    text-shadow: 0 0 20px hsla(var(--glow-primary), 0.5), 0 0 40px hsla(var(--glow-primary), 0.3);
+}
+
+.card {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background-color: var(--card);
+    color: var(--card-foreground);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s;
+    text-align: center;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+}
+.btn-primary:hover {
+    background-color: hsl(142, 76%, 45%);
+}
+
+.btn-outline {
+    border: 1px solid hsla(142, 76%, 50%, 0.5);
+    background-color: transparent;
+    color: var(--foreground);
+}
+.btn-outline:hover {
+    background-color: hsla(142, 76%, 50%, 0.1);
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow-pulse {
+    0%, 100% { 
+        box-shadow: 0 0 60px hsla(142, 76%, 50%, 0.4), 0 0 100px hsla(142, 76%, 50%, 0.2);
+    }
+    50% { 
+        box-shadow: 0 0 80px hsla(142, 76%, 50%, 0.6), 0 0 120px hsla(142, 76%, 50%, 0.3);
+    }
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
+    transition: all 0.3s;
+}
+.navbar.scrolled {
+    background-color: rgba(16, 21, 35, 0.95);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid hsla(142, 76%, 50%, 0.2);
+}
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    animation: fade-in 0.6s ease-out;
+}
+.logo-container img {
+    height: 3rem;
+    width: 3rem;
+    object-fit: contain;
+    animation: float 3s ease-in-out infinite;
+}
+.logo-text h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+.logo-text p {
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+    margin: 0;
+}
+.nav-links {
+    display: none;
+}
+.nav-links button {
+    font-size: 0.875rem;
+    font-family: 'Rajdhani', sans-serif;
+    color: hsla(120, 100%, 95%, 0.8);
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 2px;
+}
+.nav-links button:hover {
+    color: var(--primary);
+}
+.nav-links button span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s;
+}
+.nav-links button:hover span {
+    width: 100%;
+}
+.mobile-menu-button {
+    display: block;
+}
+.mobile-menu {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    animation: fade-in 0.3s ease-out;
+    display: none;
+}
+#mobile-menu.active {
+    display: block;
+}
+.mobile-menu .flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.mobile-menu button {
+    text-align: left;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: hsla(120, 100%, 95%, 0.8);
+    transition: all 0.3s;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.mobile-menu button:hover {
+    color: var(--primary);
+    background-color: hsla(142, 76%, 50%, 0.1);
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, hsla(142, 76%, 50%, 0.3), transparent);
+    animation: glow-pulse 3s ease-in-out infinite;
+    pointer-events: none;
+}
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    right: -200px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, hsla(175, 70%, 55%, 0.3), transparent);
+    animation: glow-pulse 4s ease-in-out infinite;
+    pointer-events: none;
+}
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    animation: fade-in 0.6s ease-out;
+}
+.hero-title-first {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px hsla(var(--glow-primary), 0.5);
+}
+.hero-title-second {
+    background: linear-gradient(90deg, var(--accent), var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px hsla(var(--glow-secondary), 0.5);
+    line-height: 0.9;
+    margin-top: -0.5rem;
+}
+.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--muted-foreground);
+    animation: fade-in 0.6s ease-out 0.2s backwards;
+}
+
+/* Bidding Details Section */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fade-in 0.6s ease-out;
+}
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.section-header p {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+}
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    margin: 0 auto;
+}
+.card {
+    background-color: hsla(220, 25%, 8%, 0.5);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-color: hsla(142, 76%, 50%, 0.2);
+    transition: all 0.3s;
+}
+.card:hover {
+    border-color: hsla(142, 76%, 50%, 0.5);
+    box-shadow: 0 0 30px hsla(var(--glow-primary), 0.2), 0 0 60px hsla(var(--glow-primary), 0.1);
+}
+.card-header, .card-content {
+    padding: 1.25rem;
+}
+.card-content {
+    padding-top: 0.01rem;
+    padding-bottom: 0.01rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.01rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+.card-icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    color: var(--primary);
+}
+.card-title {
+    font-size: 1.5rem;
+}
+.important-note-card {
+    margin-top: 2rem;
+    width: 100%;
+    background-color: hsla(175, 70%, 55%, 0.1);
+    border-color: hsla(175, 70%, 55%, 0.3);
+}
+.important-note-card .card-title {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+.contact-card {
+    max-width: 600px;
+    margin: auto;
+}
+.contact-email, .contact-card a {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.card-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+.card-content ul li {
+    margin-bottom: 0.5rem;
+}
+.bidding-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+.bidding-table th, .bidding-table td {
+    border: 1px solid hsla(142, 76%, 50%, 0.2);
+    padding: 0.5rem;
+    text-align: left;
+}
+.bidding-table th {
+    background-color: hsla(142, 76%, 50%, 0.1);
+    color: var(--primary);
+}
+.bidding-table td {
+    color: var(--foreground);
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid hsla(142, 76%, 50%, 0.2);
+    padding: 3rem 1rem;
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.footer p {
+    color: var(--muted-foreground);
+}
+.footer-logo {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .nav-links { display: flex; gap: 1.5rem; }
+    .mobile-menu-button, .mobile-menu { display: none; }
+    .hero-title { font-size: 4.5rem; }
+    .hero-subtitle { font-size: 1.5rem; }
+    .section-header h2 { font-size: 3rem; }
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-container { flex-direction: row; }
+}
+@media (min-width: 1024px) {
+    .grid { grid-template-columns: repeat(3, 1fr); }
+    .hero-title { font-size: 5rem; }
+}
