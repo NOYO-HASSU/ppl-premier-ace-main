@@ -5,12 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Premier Padel League - PPL Pakistan</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/ppl-logo.png" />
     <link rel="shortcut icon" type="image/png" href="assets/ppl-logo.png" />
     <link rel="apple-touch-icon" href="assets/ppl-logo.png" />
-    
+
     <meta name="description"
         content="Premier Padel League - Pakistan's premier padel tournament featuring clubs from Lahore, Karachi, and Islamabad/Rawalpindi" />
     <meta name="author" content="Premier Padel League" />
@@ -30,7 +30,7 @@
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" /> -->
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_v1.css">
 </head>
 
 <body>
@@ -48,6 +48,7 @@
                     <button data-href="#home">Home<span></span></button>
                     <button data-href="#club-bidding">Club Bidding<span></span></button>
                     <button data-href="#player-bidding">Player Bidding<span></span></button>
+                    <button data-href="#registration">Registration<span></span></button>
                     <button data-href="#format">League Format<span></span></button>
                     <button data-href="#cities">Cities<span></span></button>
                     <button data-href="#contact">Contact<span></span></button>
@@ -66,6 +67,7 @@
                     <button data-href="#home">Home</button>
                     <button data-href="#club-bidding">Club Bidding</button>
                     <button data-href="#player-bidding">Player Bidding</button>
+                    <button data-href="#registration">Registration</button>
                     <button data-href="#format">League Format</button>
                     <button data-href="#cities">Cities</button>
                     <button data-href="#contact">Contact</button>
@@ -78,15 +80,16 @@
                     <img src="assets/ppl-logo.png" alt="PPL Logo" class="hero-logo glow-card rounded-full" />
                     <h1 class="hero-title"><span class="hero-title-first">PREMIER PADEL</span><span
                             class="hero-title-second">LEAGUE</span></h1>
-                    <p class="hero-subtitle">Pakistan's Elite Padel Championship</p>
+                    <p class="hero-subtitle">The Future of Padel Begins Here</p>
                     <div class="hero-badges">
+                        <div class="hero-badge hero-badge-highlight"><span>💰 30M Prize Pool</span></div>
                         <div class="hero-badge"><span>🏆 3 Categories</span></div>
                         <div class="hero-badge"><span>18 Clubs</span></div>
                         <div class="hero-badge"><span>3 Cities</span></div>
                     </div>
                     <div class="hero-buttons flex flex-col sm:flex-row justify-center items-center">
                         <a href="#contact" class="btn btn-primary">Get Started <span class="arrow">→</span></a>
-                        <a href="#format" class="btn btn-outline">Learn More</a>
+                        <!-- <a href="#format" class="btn btn-outline">Learn More</a> -->
                     </div>
                 </div>
             </section>
@@ -136,8 +139,7 @@
                                 <h3 class="card-title">Category Assignment</h3>
                             </div>
                             <div class="card-content">
-                                <p>Top 6 bids get Alpha, next 6 get Bravo, and final 6 get Charlie category placement.
-                                </p>
+                                <p>Each club will be allowed to enter 3 teams, one in each category: Alpha, Bravo, and Charlie.</p>
                             </div>
                         </div>
                     </div>
@@ -150,7 +152,8 @@
                         </div>
                     </div>
                     <div class="section-action">
-                        <a href="pages/club-bidding-rules/club-bidding_index.html" class="btn btn-primary">View Details
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfIe5LTRsboF8Z9RWV_9fUeHwhfZswPgWMgRbDPIcT_Y85RHw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Club Registration Form →</a>
+                        <a href="pages/club-bidding-rules/club-bidding_index.html" class="btn btn-outline">View Details
                             →</a>
                     </div>
                 </div>
@@ -167,7 +170,7 @@
                                 <span class="card-icon">🪙</span>
                                 <h3 class="card-title">
                                     Rewards and Incentives</h3>
-                                <span class="card-badge">allowance</span>
+                                <!-- <span class="card-badge">allowance</span> -->
                             </div>
                             <div class="card-content">
                                 <p>All selected players receive a monthly engagement allowance and additional travel
@@ -178,7 +181,7 @@
                             <div class="card-header">
                                 <span class="card-icon">🎯</span>
                                 <h3 class="card-title">Player Registration</h3>
-                                <span class="card-badge">Open Registration</span>
+                                <!-- <span class="card-badge">Open Registration</span> -->
                             </div>
                             <div class="card-content">
                                 <p>Open to players aged 16+
@@ -191,7 +194,7 @@
                                 <span class="card-icon">👨‍💼</span>
                                 <h3 class="card-title">
                                     Live Player Bidding</h3>
-                                <span class="card-badge">Bidding</span>
+                                <!-- <span class="card-badge">Bidding</span> -->
                             </div>
                             <div class="card-content">
                                 <p>Conducted as a live auction (venue TBD). Highest bidder wins after 10 seconds of no
@@ -203,10 +206,11 @@
                                 <span class="card-icon">📈</span>
                                 <h3 class="card-title">
                                     Transparency</h3>
-                                <span class="card-badge">Fair Competition</span>
+                                <!-- <span class="card-badge">Fair Competition</span> -->
                             </div>
                             <div class="card-content">
-                                <p>All bidding activity is visible to all clubs, ensuring a fair and transparent process.
+                                <p>All bidding activity is visible to all clubs, ensuring a fair and transparent
+                                    process.
                             </div>
                         </div>
                     </div>
@@ -229,6 +233,59 @@
                             Bidding Rules →</a>
                         <a href="pages/player-registration-rules/player-registration_index.html"
                             class="btn btn-outline">Player Registration Guide →</a>
+                    </div>
+                    <div class="section-action section-action-secondary">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfT-SFlVoNZ86KIFWC3kABFAN4A8jZbvqT_eohoiwLP-qq4hQ/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Player Registration Form →</a>
+                    </div>
+                </div>
+            </section>
+            <section id="registration">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="gradient-text">PPL Registration Forms</h2>
+                        <p>Register your club or yourself as a player for Pakistan's premier padel competition</p>
+                    </div>
+                    <div class="grid grid-lg-2">
+                        <div class="card registration-card">
+                            <div class="card-header">
+                                <span class="card-icon">🏢</span>
+                                <h3 class="card-title">Club Registration</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Register your club to participate in the Premier Padel League. Complete the form with your club details, documentation, and commitment to PPL standards.</p>
+                                <ul>
+                                    <li>Registered business entity required</li>
+                                    <li>Financial stability documentation</li>
+                                    <li>Commitment to PPL values and fair play</li>
+                                </ul>
+                            </div>
+                            <div class="card-action">
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfIe5LTRsboF8Z9RWV_9fUeHwhfZswPgWMgRbDPIcT_Y85RHw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full">PPL Club Registration →</a>
+                            </div>
+                        </div>
+                        <div class="card registration-card">
+                            <div class="card-header">
+                                <span class="card-icon">👤</span>
+                                <h3 class="card-title">Player Registration</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Register yourself as a player for the Premier Padel League bidding process. Open to players aged 16+ with a registration fee of PKR 5,000.</p>
+                                <ul>
+                                    <li>Age 16+ with valid CNIC</li>
+                                    <li>Contact information and short video</li>
+                                    <li>Registration fee: PKR 5,000 (non-refundable)</li>
+                                </ul>
+                            </div>
+                            <div class="card-action">
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfT-SFlVoNZ86KIFWC3kABFAN4A8jZbvqT_eohoiwLP-qq4hQ/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full">PPL Player Registration →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card important-note-card">
+                        <div class="card-content text-center">
+                            <h3 class="card-title">Important Information</h3>
+                            <p>All registrations are subject to verification and approval. Please ensure all information provided is accurate and complete. Registration fees are non-refundable. For any questions or assistance, please contact us at <strong>info@premierpadelleague.pk</strong> or call <strong>03260214141</strong>.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -279,29 +336,30 @@
                             <div class="competition-item">
                                 <span class="competition-marker">█</span>
                                 <div>
-                                    <strong>Round Robin:</strong> <span class="muted-text">All clubs within each
-                                        category play each other</span>
+                                    <strong>Round Robin:</strong> <span class="muted-text"> All clubs within each
+                                        category play each other (Home and Away Basis). Best of three sets will be
+                                        followed throughout the league.</span>
                                 </div>
                             </div>
                             <div class="competition-item">
                                 <span class="competition-marker finals">█</span>
                                 <div>
-                                    <strong>Finals:</strong> <span class="muted-text">Best-of-3 championship
-                                        matches</span>
+                                    <strong>Match Format:</strong> <span class="muted-text"> Best of three sets will be held for all matches.</span>
                                 </div>
                             </div>
                             <div class="competition-item">
                                 <span class="competition-marker">█</span>
                                 <div>
-                                    <strong>Playoffs:</strong> <span class="muted-text">Top 4 teams from each category
+                                    <strong>Playoffs:</strong> <span class="muted-text"> Top 4 teams from each category
                                         advance</span>
                                 </div>
                             </div>
                             <div class="competition-item">
                                 <span class="competition-marker">█</span>
                                 <div>
-                                    <strong>Promotion:</strong> <span class="muted-text">Top Charlie teams can advance
-                                        to Bravo</span>
+                                    <strong>Relegation:</strong> <span class="muted-text"> Teams Coming on 5th, 6th place
+                                        of each category will Exit league to next year and new teams will be introduced
+                                        in their place.</span>
                                 </div>
                             </div>
                         </div>
@@ -322,7 +380,7 @@
                             <h3 class="card-title text-center">Lahore</h3>
                             <p class="text-center cities-description">The cultural capital hosts opening ceremonies and
                                 Alpha category finals</p>
-                            <div class="cities-info">
+                            <!-- <div class="cities-info">
                                 <div class="cities-info-item">
                                     <span class="cities-info-icon">📍</span>
                                     <span>3 Premium Venues</span>
@@ -331,7 +389,7 @@
                                     <span class="cities-info-icon">👥</span>
                                     <span>2000+ Spectators</span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="card cities-card">
                             <div class="cities-icon">
@@ -340,7 +398,7 @@
                             <h3 class="card-title text-center">Karachi</h3>
                             <p class="text-center cities-description">Pakistan's largest city brings massive crowds and
                                 electric atmosphere</p>
-                            <div class="cities-info">
+                            <!-- <div class="cities-info">
                                 <div class="cities-info-item">
                                     <span class="cities-info-icon">📍</span>
                                     <span>4 World-Class Courts</span>
@@ -349,7 +407,7 @@
                                     <span class="cities-info-icon">👥</span>
                                     <span>2500+ Spectators</span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="card cities-card">
                             <div class="cities-icon">
@@ -358,7 +416,7 @@
                             <h3 class="card-title text-center">Islamabad/Rawalpindi</h3>
                             <p class="text-center cities-description">Twin cities collaborate to host prestigious
                                 championship events</p>
-                            <div class="cities-info">
+                            <!-- <div class="cities-info">
                                 <div class="cities-info-item">
                                     <span class="cities-info-icon">📍</span>
                                     <span>2 State-of-Art Facilities</span>
@@ -367,7 +425,7 @@
                                     <span class="cities-info-icon">👥</span>
                                     <span>1800+ Spectators</span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="card season-schedule">
@@ -396,7 +454,7 @@
                                     <span class="contact-icon">✉️</span>
                                     <div class="contact-info">
                                         <h4 class="contact-title">Email Us</h4>
-                                        <p class="contact-link">basim.ahmed@theboysand.co</p>
+                                        <p class="contact-link">info@premierpadelleague.pk</p>
                                         <p class="contact-description">General inquiries and support</p>
                                     </div>
                                 </div>
@@ -404,15 +462,16 @@
                                     <span class="contact-icon">📞</span>
                                     <div class="contact-info">
                                         <h4 class="contact-title">Call Us</h4>
-                                        <p class="contact-link">+923200004141</p>
-                                        <p class="contact-description">Mon-Fri, 9:00 AM - 6:00 PM PKT</p>
+                                        <p class="contact-link">03260214141</p>
+                                        <!-- <p class="contact-description">Mon-Fri, 9:00 AM - 6:00 PM PKT</p> -->
                                     </div>
                                 </div>
                                 <div class="contact-item">
                                     <span class="contact-icon">📍</span>
                                     <div class="contact-info">
                                         <h4 class="contact-title">Headquarters</h4>
-                                        <p class="contact-description">PPL League<br />Office # 3070, 3rd Floor, Giga Mall,
+                                        <p class="contact-description">PPL League<br />Office # 3070, 3rd Floor, Giga
+                                            Mall,
                                             DHA- II, Islamabad, Pakistan.
                                         </p>
                                     </div>
@@ -422,10 +481,21 @@
                                 <div class="quick-links-card">
                                     <h4 class="quick-links-title">Quick Links</h4>
                                     <ul class="quick-links-list">
-                                        <li><span class="link-icon">📋</span> Club Registration Portal</li>
-                                        <li><span class="link-icon">👥</span> Player Database</li>
-                                        <li><span class="link-icon">📅</span> Event Calendar</li>
-                                        <li><span class="link-icon">🏆</span> League Standings</li>
+                                        <li><a href="https://docs.google.com/document/d/1nUFxZ-6ABNgU9qN-CbjqoxnxfcQdfHe-pZNYrMOyrwA/edit?usp=drivesdk"
+                                                target="_blank" rel="noopener noreferrer"><span
+                                                    class="link-icon">📅</span> CLUB BIDDING & REGISTRATION</a></li>
+                                        <li><a href="https://docs.google.com/document/d/19qS0G8p3f_aCXafUaArOgX10IKjEgL0ID5X0KBwpRfU/edit?usp=drivesdk"
+                                                target="_blank" rel="noopener noreferrer"><span
+                                                    class="link-icon">🏆</span> Player Bidding Instructions</a></li>
+                                        <li><a href="https://docs.google.com/document/d/17fMkmmDRLp9tcJnmdy4BUYDWBC_1acrda4v4snc-zWU/edit?tab=t.0"
+                                                target="_blank" rel="noopener noreferrer"><span
+                                                    class="link-icon">📋</span> PLAYER REGISTRATION GUIDE</a></li>
+                                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfIe5LTRsboF8Z9RWV_9fUeHwhfZswPgWMgRbDPIcT_Y85RHw/viewform?usp=header"
+                                                target="_blank" rel="noopener noreferrer"><span
+                                                    class="link-icon">🤵</span> Club Registration Portal</a></li>
+                                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfT-SFlVoNZ86KIFWC3kABFAN4A8jZbvqT_eohoiwLP-qq4hQ/viewform"
+                                                target="_blank" rel="noopener noreferrer"><span
+                                                    class="link-icon">👥</span> Player Registration Portal</a></li>
                                     </ul>
                                 </div>
                                 <div class="media-inquiries-card">
@@ -443,9 +513,9 @@
                     <div class="social-section">
                         <p class="social-text">Follow us for the latest updates and announcements</p>
                         <div class="social-links">
-                            <a href="#" class="social-btn">Facebook</a>
-                            <a href="#" class="social-btn">Instagram</a>
-                            <a href="#" class="social-btn">Twitter</a>
+                            <!-- <a href="#" class="social-btn">Facebook</a> -->
+                            <a href="https://www.instagram.com/premier_padel_league_pk/" target="_blank" rel="noopener noreferrer" class="social-btn">Instagram</a>
+                            <!-- <a href="#" class="social-btn">Twitter</a> -->
                         </div>
                     </div>
                 </div>
@@ -464,7 +534,7 @@
                     <p>© 2025 Premier Padel League. All rights reserved.</p>
                 </div>
                 <div class="footer-right">
-                    <p>Bringing world-class padel to Pakistan</p>
+                    <p>The Future of Padel Begins Here</p>
                 </div>
             </div>
         </footer>

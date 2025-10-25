@@ -775,58 +775,6 @@ section {
     color: var(--secondary);
 }
 
-/* --- Registration Section --- */
-.registration-card {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 2rem;
-    min-height: 100%;
-    transition: all 0.3s ease;
-}
-
-.registration-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 30px hsla(142, 76%, 50%, 0.2);
-}
-
-.registration-card .card-content {
-    flex: 1;
-}
-
-.registration-card .card-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-}
-
-.registration-card .card-content ul li {
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.registration-card .card-content ul li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--primary);
-    font-weight: bold;
-}
-
-.registration-card .card-action {
-    margin-top: auto;
-}
-
-.grid-lg-2 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-
-.w-full {
-    width: 100%;
-}
-
 /* --- Format Section --- */
 .format-card {
     text-align: center;
@@ -1317,7 +1265,6 @@ section {
     
     .grid { grid-template-columns: 1fr; }
     .grid-lg-3 { grid-template-columns: 1fr; }
-    .grid-lg-2 { grid-template-columns: 1fr; }
     
     .card {
         max-width: 100%;
@@ -1389,14 +1336,6 @@ section {
     .hero-badges {
         gap: 0.5rem;
     }
-    
-    .registration-card {
-        padding: 1.5rem;
-    }
-    
-    .registration-card .card-action .btn {
-        width: 100%;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -1408,7 +1347,6 @@ section {
     .section-header h2 { font-size: 3rem; }
     .grid { grid-template-columns: repeat(2, 1fr); }
     .grid-lg-3 { grid-template-columns: repeat(2, 1fr); }
-    .grid-lg-2 { grid-template-columns: repeat(2, 1fr); }
     .footer-container { flex-direction: row; }
     .contact-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
 }
@@ -1417,7 +1355,6 @@ section {
     .nav-links { display: flex; gap: 1.5rem; }
     .mobile-menu-button, .mobile-menu { display: none; }
     .grid-lg-3 { grid-template-columns: repeat(3, 1fr) !important; }
-    .grid-lg-2 { grid-template-columns: repeat(2, 1fr) !important; }
     .hero-section h1 { font-size: 5rem; }
     .hero-title { font-size: 5rem; }
     .grid { grid-template-columns: repeat(2, 1fr); }
