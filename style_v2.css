@@ -309,10 +309,10 @@ section {
     transition: all 0.3s;
 }
 .navbar.scrolled {
-    background-color: rgba(16, 21, 35, 0.95); /* Equivalent to bg-background/95 */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid hsla(142, 76%, 50%, 0.2);
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
 }
 .navbar-container {
     display: flex;
