@@ -60,6 +60,8 @@ section {
     position: relative;
     overflow: hidden;
     padding: 5rem 1rem;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 /* Glowing Spots Effect */
@@ -76,6 +78,9 @@ section {
     opacity: 0.15;
     pointer-events: none;
     z-index: 0;
+    will-change: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 #club-bidding::after,
@@ -91,6 +96,9 @@ section {
     opacity: 0.12;
     pointer-events: none;
     z-index: 0;
+    will-change: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 /* Club Bidding - Green glow spots */
@@ -604,10 +612,15 @@ section {
     border-color: hsla(142, 76%, 50%, 0.2);
     transition: all 0.3s;
     padding: 1rem;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform, box-shadow;
 }
 .card:hover {
     border-color: hsla(142, 76%, 50%, 0.5);
     box-shadow: 0 0 30px hsla(var(--glow-primary), 0.2), 0 0 60px hsla(var(--glow-primary), 0.1);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 #club-bidding .card {
@@ -1302,6 +1315,44 @@ section {
 
 /* --- Responsive Styles --- */
 @media (max-width: 768px) {
+    /* Disable heavy effects on mobile for better performance */
+    #club-bidding::before,
+    #club-bidding::after,
+    #player-bidding::before,
+    #player-bidding::after,
+    #format::before,
+    #format::after,
+    #cities::before,
+    #cities::after {
+        display: none;
+    }
+    
+    /* Simplify card backdrop blur on mobile */
+    .card {
+        max-width: 100%;
+        overflow: hidden;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        background-color: hsla(220, 25%, 8%, 0.95);
+        will-change: auto;
+    }
+    
+    /* Disable hover effects on mobile */
+    .card:hover {
+        transform: none;
+        box-shadow: 0 0 20px hsla(142, 76%, 50%, 0.15), inset 0 0 10px hsla(142, 76%, 50%, 0.05);
+    }
+    
+    #club-bidding .card:hover {
+        box-shadow: 0 0 20px hsla(142, 76%, 50%, 0.15), inset 0 0 10px hsla(142, 76%, 50%, 0.05);
+    }
+    
+    /* Optimize animations */
+    * {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    
     .nav-links { display: none; }
     .mobile-menu-button { display: block; }
     
@@ -1318,11 +1369,6 @@ section {
     .grid { grid-template-columns: 1fr; }
     .grid-lg-3 { grid-template-columns: 1fr; }
     .grid-lg-2 { grid-template-columns: 1fr; }
-    
-    .card {
-        max-width: 100%;
-        overflow: hidden;
-    }
     
     .card-content {
         padding: 1rem;
