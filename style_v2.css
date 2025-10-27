@@ -1257,6 +1257,28 @@ section {
     color: var(--primary);
 }
 
+/* --- Back Button Section --- */
+.back-button-section {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 200px;
+}
+
+.arrow-back {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.back-btn:hover .arrow-back {
+    transform: translateX(-5px);
+}
+
 /* --- Footer --- */
 .footer {
     border-top: 1px solid hsla(142, 76%, 50%, 0.2);
@@ -1360,6 +1382,18 @@ section {
     .hero-title { font-size: 2.5rem; }
     .hero-section p { font-size: 1rem; }
     .hero-logo { height: 8rem; width: 8rem; margin: 0 auto 1rem; }
+    
+    /* Add vertical spacing between hero buttons on mobile */
+    .hero-buttons {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .hero-buttons .btn {
+        margin: 0;
+        width: 100%;
+        max-width: 300px;
+    }
     
     .container { 
         padding-left: 1rem; 
