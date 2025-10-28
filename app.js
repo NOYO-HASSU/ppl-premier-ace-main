@@ -13,6 +13,16 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             nav.classList.remove('scrolled');
         }
+        
+        // Scroll to top button visibility
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+        if (scrollToTopBtn) {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        }
     });
 
     // Mobile menu toggle
@@ -46,4 +56,15 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+    
+    // Scroll to top button functionality
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+    if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
