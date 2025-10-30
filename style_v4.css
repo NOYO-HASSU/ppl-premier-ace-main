@@ -1242,6 +1242,14 @@ section {
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+}
+
+.social-btn svg {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5rem;
 }
 
 .social-btn:hover {
@@ -1249,6 +1257,23 @@ section {
     border-color: hsla(142, 76%, 50%, 0.8);
     color: var(--primary);
 }
+
+.whatsapp-btn:hover {
+    background-color: hsla(142, 76%, 50%, 0.15);
+    border-color: var(--primary);
+}
+
+.whatsapp-link {
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.whatsapp-link:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
 .icon-container {
     padding: 0.75rem;
     background-color: hsla(142, 76%, 50%, 0.1);
@@ -1383,6 +1408,15 @@ section {
 
 /* --- Responsive Styles --- */
 @media (max-width: 768px) {
+    /* Ensure navbar stays fixed on mobile */
+    .navbar {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 50 !important;
+    }
+    
     /* Disable heavy effects on mobile for better performance */
     #club-bidding::before,
     #club-bidding::after,
@@ -1413,12 +1447,6 @@ section {
     
     #club-bidding .card:hover {
         box-shadow: 0 0 20px hsla(142, 76%, 50%, 0.15), inset 0 0 10px hsla(142, 76%, 50%, 0.05);
-    }
-    
-    /* Optimize animations */
-    * {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
     }
     
     .nav-links { display: none; }
@@ -1524,12 +1552,14 @@ section {
         width: 100%;
     }
     
-    /* Scroll to top button - mobile */
+    /* Scroll to top button - mobile - ensure it stays fixed */
     .scroll-to-top {
-        bottom: 1rem;
-        right: 1rem;
+        position: fixed !important;
+        bottom: 1rem !important;
+        right: 1rem !important;
         width: 2.5rem;
         height: 2.5rem;
+        z-index: 1000 !important;
     }
     
     .scroll-to-top svg {
