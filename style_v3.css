@@ -2,6 +2,9 @@
 
 /* --- CSS Variables (Design System) --- */
 :root {
+    color-scheme: dark;
+    -webkit-color-scheme: dark;
+    
     --background: hsl(220, 30%, 5%);
     --foreground: hsl(120, 100%, 95%);
     --card: hsl(220, 25%, 8%);
