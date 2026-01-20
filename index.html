@@ -76,11 +76,17 @@
         </nav>
         <main>
             <section id="home" class="hero-section">
-                <div class="container">
-                    <img src="assets/ppl-logo.png" alt="PPL Logo" class="hero-logo glow-card rounded-full" />
-                    <h1 class="hero-title"><span class="hero-title-first">PREMIER PADEL</span><span
-                            class="hero-title-second">LEAGUE</span></h1>
-                    <p class="hero-subtitle">The Future of Padel Begins Here</p>
+                <!-- Video Background -->
+                <video class="hero-video" autoplay muted pla5ysinline>
+                    <source src="assets/videos/header_video.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+                
+
+                <div class="container hero-container">
+                    <!-- <img src="assets/ppl-logo.png" alt="PPL Logo" class="hero-logo glow-card rounded-full" /> -->
+                    <h1 class="hero-title vertical-text"><span class="hero-title-first">PAKISTAN 1ST NATIONAL PADEL LEAGUE</span></h1>
+                    <!-- <p class="hero-subtitle">The Future of Padel Begins Here</p>
                     <div class="hero-badges">
                         <div class="hero-badge hero-badge-highlight"><span>💰 30M Prize Pool</span></div>
                         <div class="hero-badge"><span>🏆 3 Categories</span></div>
@@ -89,8 +95,8 @@
                     </div>
                     <div class="hero-buttons flex flex-col sm:flex-row justify-center items-center">
                         <a href="#contact" class="btn btn-primary">Get Started <span class="arrow">→</span></a>
-                        <!-- <a href="#format" class="btn btn-outline">Learn More</a> -->
-                    </div>
+                        <a href="#format" class="btn btn-outline">Learn More</a>
+                    </div> -->
                 </div>
             </section>
             <section id="club-bidding">
@@ -608,6 +614,40 @@
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
+    
+    <!-- Firebase SDK -->
+    <!-- <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+        // Add other Firebase services as needed
+        // import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        // import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        // import { getStorage } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js";
+
+        // Your web app's Firebase configuration
+        // TODO: Replace with your Firebase project configuration
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID",
+            measurementId: "YOUR_MEASUREMENT_ID"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        // Make Firebase available globally
+        window.firebaseApp = app;
+        window.firebaseAnalytics = analytics;
+        
+        console.log("Firebase initialized successfully");
+    </script> -->
+    
     <script src="app.js"></script>
 </body>
 
