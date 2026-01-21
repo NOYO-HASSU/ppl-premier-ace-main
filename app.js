@@ -38,16 +38,16 @@ document.addEventListener("DOMContentLoaded", function() {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const href = this.getAttribute('href') || this.getAttribute('data-href');
-            
-            // Handle external links to main page sections (for subpages)
-            if (href.includes('index.html')) {
-                window.location.href = href;
-            } else {
-                // Smooth scroll to section on current page
+            if (!href) return;
+
+            // Navigate to pages or external URLs; smooth-scroll only for same-page hashes
+            if (href.startsWith('#')) {
                 const target = document.querySelector(href);
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
                 }
+            } else {
+                window.location.href = href;
             }
             
             // Close mobile menu if open
