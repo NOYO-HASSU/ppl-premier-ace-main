@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0a0f14" />
+    <meta name="supported-color-schemes" content="dark" />
+    <title>Premier Padel League - PPL Pakistan</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/ppl-logo.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/ppl-logo.png" />
+    <link rel="apple-touch-icon" href="assets/ppl-logo.png" />
+
+    <meta name="description"
+        content="Premier Padel League - Pakistan's premier padel league featuring clubs from Lahore, Karachi, and Islamabad/Rawalpindi" />
+    <meta name="author" content="Premier Padel League" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <meta property="og:title" content="Premier Padel League - PPL Pakistan" />
+    <meta property="og:description"
+        content="Pakistan's premier padel league featuring clubs from Lahore, Karachi, and Islamabad/Rawalpindi" />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="root">
+        <nav class="navbar">
+            <div class="container navbar-container">
+                <div class="logo-container">
+                    <img src="assets/ppl-logo.png" alt="PPL Logo" />
+                    <div class="logo-text">
+                        <h1 class="glow-text">PPL</h1>
+                        <p>Premier Padel League</p>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <button data-href="#home">Home<span></span></button>
+                    <button data-href="#club-bidding">Club Bidding<span></span></button>
+                    <button data-href="#registration">Registration<span></span></button>
+                    <button data-href="#format">League Format<span></span></button>
+                    <button data-href="#app">Mobile App<span></span></button>
+                    <button data-href="pages/about.html">About<span></span></button>
+                    <button data-href="pages/contact.html">Contact<span></span></button>
+                </div>
+                <button id="mobile-menu-button" class="mobile-menu-button btn btn-outline" title="Toggle mobile menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor">
+                        <line x1="4" x2="20" y1="12" y2="12" />
+                        <line x1="4" x2="20" y1="6" y2="6" />
+                        <line x1="4" x2="20" y1="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="mobile-menu container" role="navigation">
+                <div class="flex-col">
+                    <button data-href="#home">Home</button>
+                    <button data-href="#club-bidding">Club Bidding</button>
+                    <button data-href="#registration">Registration</button>
+                    <button data-href="#format">League Format</button>
+                    <button data-href="#app">Mobile App</button>
+                    <button data-href="pages/about.html">About</button>
+                    <button data-href="pages/contact.html">Contact</button>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <section id="home" class="hero-section">
+                <!-- Video Background -->
+                <video class="hero-video" autoplay muted playsinline loop preload="metadata">
+                    <source src="assets/videos/header_video.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+                
+
+                <div class="container hero-container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            <span class="hero-title-line">PAKISTAN'S 1ST</span>
+                            <span class="hero-title-highlight">NATION WIDE PADEL LEAGUE</span>
+                            <!-- <span class="hero-title-line">FOR INVESTMENT</span> -->
+                        </h1>
+                        <p class="hero-subtitle">Be Part of the Movement</p>
+                        <div class="hero-buttons">
+                            <a href="#registration" class="btn btn-primary">REGISTER NOW</a>
+                        </div>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number gradient-text">18</div>
+                            <div class="stat-label">Franchise Clubs</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-number gradient-text">3 Cities</div>
+                            <div class="stat-label">ISB, LHE, KHI</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-number gradient-text">RS 30,000,000</div>
+                            <div class="stat-label">Grand Prize Pool</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-number gradient-text">300+</div>
+                            <div class="stat-label">Registered Players</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Featured Sponsors -->
+            <section class="featured-sponsors-section">
+                <div class="featured-sponsors-container">
+                    <div class="featured-sponsor-item">
+                        <img src="assets/sponser_logo/red bull.png" alt="Red Bull" class="featured-sponsor-logo">
+                    </div>
+                    <div class="featured-sponsor-item">
+                        <img src="assets/sponser_logo/myco (2).png" alt="Myco" class="featured-sponsor-logo">
+                    </div>
+                    <div class="featured-sponsor-item">
+                        <img src="assets/sponser_logo/yango.png" alt="Yango" class="featured-sponsor-logo">
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Sponsor Banners -->
+            <section class="sponsors-section">
+                <div class="sponsor-banner sponsor-banner-1">
+                    <div class="sponsor-track">
+                        <img src="assets/sponser_logo/red bull.png" alt="Red Bull">
+                        <img src="assets/sponser_logo/devia.png" alt="Devia">
+                        <img src="assets/sponser_logo/goldplex.png" alt="Goldplex">
+                        <img src="assets/sponser_logo/yango.png" alt="Yango">
+                        <img src="assets/sponser_logo/maidan.png" alt="Maidan">
+                        <img src="assets/sponser_logo/pulse active.png" alt="Pulse Active">
+                        <img src="assets/sponser_logo/padelistan.png" alt="Padelistan">
+                        <img src="assets/sponser_logo/The-Dome-2.png" alt="The Dome">
+                        <img src="assets/sponser_logo/TUSCANY.png" alt="Tuscany">
+                        <img src="assets/sponser_logo/a sports.png" alt="A Sports">
+                        <!-- Duplicate for seamless loop -->
+                        <img src="assets/sponser_logo/red bull.png" alt="Red Bull">
+                        <img src="assets/sponser_logo/devia.png" alt="Devia">
+                        <img src="assets/sponser_logo/goldplex.png" alt="Goldplex">
+                        <img src="assets/sponser_logo/yango.png" alt="Yango">
+                        <img src="assets/sponser_logo/maidan.png" alt="Maidan">
+                        <img src="assets/sponser_logo/pulse active.png" alt="Pulse Active">
+                        <img src="assets/sponser_logo/padelistan.png" alt="Padelistan">
+                        <img src="assets/sponser_logo/The-Dome-2.png" alt="The Dome">
+                        <img src="assets/sponser_logo/TUSCANY.png" alt="Tuscany">
+                        <img src="assets/sponser_logo/a sports.png" alt="A Sports">
+                    </div>
+                </div>
+                <div class="sponsor-banner sponsor-banner-2">
+                    <div class="sponsor-track">
+                        <img src="assets/sponser_logo/padel plus.png" alt="Padel Plus">
+                        <img src="assets/sponser_logo/the padel district.png" alt="The Padel District">
+                        <img src="assets/sponser_logo/smashed it.png" alt="Smashed It">
+                        <img src="assets/sponser_logo/nomnom.png" alt="Nom Nom">
+                        <img src="assets/sponser_logo/JK.png" alt="JK">
+                        <img src="assets/sponser_logo/MSM.png" alt="MSM">
+                        <img src="assets/sponser_logo/myco (2).png" alt="Myco">
+                        <img src="assets/sponser_logo/The Blitz Club.jpg" alt="The Blitz Club">
+                        <img src="assets/sponser_logo/Tensile Pakistan Pvt Ltd.png" alt="Tensile Pakistan">
+                        <img src="assets/sponser_logo/tbclogo.jpg" alt="TBC">
+                        <img src="assets/sponser_logo/thebrandcreators.jpg" alt="The Brand Creators">
+                        <!-- Duplicate for seamless loop -->
+                        <img src="assets/sponser_logo/padel plus.png" alt="Padel Plus">
+                        <img src="assets/sponser_logo/the padel district.png" alt="The Padel District">
+                        <img src="assets/sponser_logo/smashed it.png" alt="Smashed It">
+                        <img src="assets/sponser_logo/nomnom.png" alt="Nom Nom">
+                        <img src="assets/sponser_logo/JK.png" alt="JK">
+                        <img src="assets/sponser_logo/MSM.png" alt="MSM">
+                        <img src="assets/sponser_logo/myco (2).png" alt="Myco">
+                        <img src="assets/sponser_logo/The Blitz Club.jpg" alt="The Blitz Club">
+                        <img src="assets/sponser_logo/Tensile Pakistan Pvt Ltd.png" alt="Tensile Pakistan">
+                        <img src="assets/sponser_logo/tbclogo.jpg" alt="TBC">
+                        <img src="assets/sponser_logo/thebrandcreators.jpg" alt="The Brand Creators">
+                    </div>
+                </div>
+            </section>
+            
+            <!--  Timeline Section -->
+            <section id="timeline">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="gradient-text">Timeline 2026</h2>
+                        <p></p>
+                    </div>
+                    <div class="timeline-grid">
+                        <div class="timeline-item timeline-q1">
+                            <div class="timeline-quarter">
+                                <div class="quarter-badge">Q1</div>
+                                <span class="quarter-month">JAN</span>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Islamabad & Rawalpindi</h3>
+                                <p>Inaugural Launch</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-q2">
+                            <div class="timeline-quarter">
+                                <div class="quarter-badge">Q2</div>
+                                <span class="quarter-month">APR</span>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Lahore</h3>
+                                <p>Punjab Expansion</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-q3">
+                            <div class="timeline-quarter">
+                                <div class="quarter-badge">Q3</div>
+                                <span class="quarter-month">JUL</span>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Karachi</h3>
+                                <p>Coastal Rollout</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-q4">
+                            <div class="timeline-quarter">
+                                <div class="quarter-badge">Q4</div>
+                                <span class="quarter-month">OCT</span>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Champions League</h3>
+                                <p>National Finals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PPL Category A Winners Go Global Section -->
+            <section id="winners-global">
+            </section>
+
+            <section id="club-bidding">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="gradient-text">Rules & Instructions</h2>
+                        <p>Complete guide to bidding, registration and player recruitment process</p>
+                    </div>
+
+                    <!-- All Rules Combined -->
+                    <div class="grid">
+                        <!-- Club Eligibility -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Club Eligibility</h4>
+                            </div>
+                            <div class="card-content">
+                                <p>Clubs must be registered business entities with financial stability and commitment to PPL values. Each club enters 3 teams across Alpha, Bravo, and Charlie categories.</p>
+                            </div>
+                        </div>
+
+                        <!-- Prize Pool -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Prize Pool & Categories</h4>
+                            </div>
+                            <div class="card-content">
+                                <p>Total Prize Pool: PKR 30 million across 3 Cities. 10 million per city. Three competitive categories with 6 clubs each: Alpha (Elite), Bravo (Competitive), and Charlie (Developing).</p>
+                            </div>
+                        </div>
+
+                        <!-- Player Registration -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Player Registration</h4>
+                            </div>
+                            <div class="card-content">
+                                <p>Open to players aged 16+. Registration requires CNIC, contact info, and short video. Fee: PKR 5,000 (non-refundable). Selected players receive monthly engagement and travel allowances.</p>
+                            </div>
+                        </div>
+
+                        <!-- Bidding Process -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Bidding Process</h4>
+                            </div>
+                            <div class="card-content">
+                                <p>Live auction format with 3 rounds of bidding. Highest bidder wins after 10 seconds of no new bids. Players sign with winning club immediately. 8-12 players per squad with 100% transparent process.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats Grid -->
+                    <div class="stats-grid">
+                        <div class="stat-card stat-primary">
+                            <div class="stat-value">8-12</div>
+                            <div class="stat-label">Players per Squad</div>
+                        </div>
+                        <div class="stat-card stat-accent">
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">Rounds of Bidding</div>
+                        </div>
+                        <div class="stat-card stat-secondary">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Transparent Process</div>
+                        </div>
+                    </div>
+
+                    <!-- Important Notes -->
+                    <div class="card important-note-card">
+                        <div class="card-content text-center">
+                            <h3 class="card-title">Important Note</h3>
+                            <p>All clubs must comply with PPL regulations and maintain fair play standards throughout the bidding process. Any violation may result in disqualification and forfeiture of registration fees.</p>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="section-action">
+                        <a href="pages/club-bidding_index.html" class="btn btn-outline">Club Bidding Details →</a>
+                        <a href="pages/player-bidding_index.html" class="btn btn-primary">Player Bidding Rules →</a>
+                        <a href="pages/player-registration_index.html" class="btn btn-outline">Player Registration Guide →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- App Features Section -->
+            <section id="app" class="app-features-section">
+                <div class="container">
+                    <div class="app-features-header">
+                        <h2 class="app-features-title">PPL Mobile Application</h2>
+                        <p class="app-features-subtitle">The Premier Padel League app is your complete hub for everything happening in Pakistan's national padel scene. Stay updated and explore all league action in one place - simple, fast, and always updated.</p>
+                    </div>
+                    
+                    <div class="app-features-grid">
+                        <!-- Left Column Features -->
+                        <div class="features-column features-left">
+                            <div class="feature-item">
+                                <div class="feature-icon-wrapper">
+                                    <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="feature-title">Live Matches & Club Stats</h3>
+                                    <p class="feature-description">Stay updated with live match results, club details, team profiles, and full player histories from tournaments across Karachi, Lahore, Islamabad, and Rawalpindi.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon-wrapper">
+                                    <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"></polyline>
+                                        <line x1="12" y1="12" x2="20" y2="7.5"></line>
+                                        <line x1="12" y1="12" x2="12" y2="21"></line>
+                                        <line x1="12" y1="12" x2="4" y2="7.5"></line>
+                                    </svg>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="feature-title">League Standings & Stats</h3>
+                                    <p class="feature-description">Explore match schedules, standings, and performance stats with an easy to use interface designed for both fans and players.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Center Phone Mockup -->
+                        <div class="phone-mockup">
+                            <img src="assets/app.png" alt="Premier Padel League App" class="phone-image">
+                        </div>
+                        
+                        <!-- Right Column Features -->
+                        <div class="features-column features-right">
+                            <div class="feature-item">
+                                <div class="feature-icon-wrapper">
+                                    <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="feature-title">Follow Clubs & Players</h3>
+                                    <p class="feature-description">Track your favorite clubs and players as they compete throughout the season. Never miss a moment of their performance and journey.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon-wrapper">
+                                    <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="1"></circle>
+                                        <circle cx="19" cy="12" r="1"></circle>
+                                        <circle cx="5" cy="12" r="1"></circle>
+                                        <path d="M12 2v4m0 8v4m7-7h4m-8 0h4m-8 0h4"></path>
+                                    </svg>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="feature-title">Premier Padel Fantasy League</h3>
+                                    <p class="feature-description">Build your own virtual teams, purchase coins, and buy players. Earn points based on real match performances for a fun and strategic experience.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- App Download Buttons -->
+                    <div class="app-download-buttons">
+                        <a href="https://play.google.com/store/apps/details?id=com.tbc.ppl" target="_blank" rel="noopener noreferrer" class="download-btn android-btn">
+                            <img src="assets/playstore.png" alt="Google Play" class="download-btn-icon">
+                            <span class="download-btn-text">Download for Android</span>
+                        </a>
+                        <a href="https://apps.apple.com/in/app/premier-pedal-league/id6755585641" target="_blank" rel="noopener noreferrer" class="download-btn ios-btn">
+                            <img src="assets/appstore.png" alt="App Store" class="download-btn-icon">
+                            <span class="download-btn-text">Download for iOS</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="registration">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="gradient-text">PPL Registration Forms</h2>
+                        <p>Register your club or yourself as a player for Pakistan's premier padel competition</p>
+                    </div>
+                    <div class="grid grid-lg-2">
+                        <div class="card registration-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Club Registration</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Register your club to participate in the Premier Padel League. Complete the form with your club details, documentation, and commitment to PPL standards.</p>
+                                <ul>
+                                    <li>Registered business entity required</li>
+                                    <li>Financial stability documentation</li>
+                                    <li>Commitment to PPL values and fair play</li>
+                                </ul>
+                            </div>
+                            <div class="card-action">
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfIe5LTRsboF8Z9RWV_9fUeHwhfZswPgWMgRbDPIcT_Y85RHw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full">PPL Club Registration →</a>
+                            </div>
+                        </div>
+                        <div class="card registration-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Player Registration</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Register yourself as a player for the Premier Padel League bidding process. Open to players aged 16+ with a registration fee of PKR 5,000.</p>
+                                <ul>
+                                    <li>Age 16+ with valid CNIC</li>
+                                    <li>Contact information and short video</li>
+                                    <li>Registration fee: PKR 5,000 (non-refundable)</li>
+                                </ul>
+                            </div>
+                            <div class="card-action">
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfT-SFlVoNZ86KIFWC3kABFAN4A8jZbvqT_eohoiwLP-qq4hQ/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full">PPL Player Registration →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card important-note-card">
+                        <div class="card-content text-center">
+                            <h3 class="card-title">Important Information</h3>
+                            <p>All registrations are subject to verification and approval. Please ensure all information provided is accurate and complete. Registration fees are non-refundable. For any questions or assistance, please contact us at <strong>info@premierpadelleague.pk</strong> or call <strong>03460424141</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sponsorship">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="sponsorship-title">Sponsorship Categories</h2>
+                        <p>Partnership opportunities with the Premier Padel League</p>
+                    </div>
+                    
+                    <div class="sponsorship-grid">
+                        <!-- Title Sponsor -->
+                        <div class="sponsorship-card sponsorship-title-tier">
+                            <div class="sponsorship-badge">EXCLUSIVE</div>
+                            <h3 class="sponsorship-name">Title Sponsor</h3>
+                            <p class="sponsorship-label">Investment</p>
+                            <div class="sponsorship-amount">PKR 20 Million</div>
+                            <ul class="sponsorship-benefits">
+                                <li>✓ Naming Rights: "Premier Padel League powered by [Brand]"</li>
+                                <li>✓ Dominant branding across all arenas nationwide</li>
+                                <li>✓ Prime Logo on all team kits (Front)</li>
+                                <li>✓ Exclusive category protection</li>
+                                <li>✓ Priority media & broadcast mentions</li>
+                            </ul>
+                        </div>
+
+                        <!-- Titanium Sponsor -->
+                        <div class="sponsorship-card sponsorship-titanium-tier">
+                            <h3 class="sponsorship-name">Titanium</h3>
+                            <p class="sponsorship-label">Investment</p>
+                            <div class="sponsorship-amount">PKR 10 Million</div>
+                            <ul class="sponsorship-benefits">
+                                <li>✓ Arena branding at 30 venues</li>
+                                <li>✓ Secondary kit logo placement</li>
+                                <li>✓ Coverage in Islamabad, Lahore & Karachi</li>
+                                <li>✓ Branded stalls at match venues</li>
+                                <li>✓ Visibility in highlight clips</li>
+                            </ul>
+                        </div>
+
+                        <!-- Platinum Sponsor -->
+                        <div class="sponsorship-card sponsorship-platinum-tier">
+                            <h3 class="sponsorship-name">Platinum</h3>
+                            <p class="sponsorship-label">Investment</p>
+                            <div class="sponsorship-amount">PKR 5 Million</div>
+                            <ul class="sponsorship-benefits">
+                                <li>✓ City-based premium visibility</li>
+                                <li>✓ Logo on shorts / kits</li>
+                                <li>✓ Presence in two major cities</li>
+                                <li>✓ Arena standees at selected venues</li>
+                                <li>✓ Match-day visual exposure</li>
+                            </ul>
+                        </div>
+
+                        <!-- Gold Sponsor -->
+                        <div class="sponsorship-card sponsorship-gold-tier">
+                            <h3 class="sponsorship-name">Gold</h3>
+                            <p class="sponsorship-label">Investment</p>
+                            <div class="sponsorship-amount">PKR 2 Million</div>
+                            <ul class="sponsorship-benefits">
+                                <li>✓ Entry-level league exposure</li>
+                                <li>✓ Logo on socks & match balls</li>
+                                <li>✓ Single-city branding</li>
+                                <li>✓ On-ground match visibility</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sponsorship-note">
+                        <p>All sponsorship rates mentioned above are exclusive of all applicable taxes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="format">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="gradient-text">League Format</h2>
+                        <p>Three competitive categories, 18 clubs, one ultimate champion</p>
+                    </div>
+                    <div class="grid grid-lg-3">
+                        <div class="card format-card format-alpha">
+                            <div class="format-image-wrapper">
+                                <img src="assets/categories/A.jpg" alt="A - Alpha Category" class="format-category-image" />
+                            </div>
+                            <h3 class="card-title text-alpha">A - Alpha</h3>
+                            <p class="format-subtitle">Elite</p>
+                            <p class="format-description">Elite Category - Top 6 clubs compete for the ultimate
+                                championship title</p>
+                            <div class="format-stat">
+                                <div class="format-stat-number">6</div>
+                                <div class="format-stat-label">Clubs</div>
+                            </div>
+                        </div>
+                        <div class="card format-card format-beta">
+                            <div class="format-image-wrapper">
+                                <img src="assets/categories/B.jpg" alt="B - Bravo Category" class="format-category-image" />
+                            </div>
+                            <h3 class="card-title text-primary">B - Bravo</h3>
+                            <p class="format-subtitle">Competitive</p>
+                            <p class="format-description">Competitive Category - High-level competitive play for
+                                championship contenders</p>
+                            <div class="format-stat">
+                                <div class="format-stat-number">6</div>
+                                <div class="format-stat-label">Clubs</div>
+                            </div>
+                        </div>
+                        <div class="card format-card format-charlie">
+                            <div class="format-image-wrapper">
+                                <img src="assets/categories/C.jpg" alt="C - Charlie Category" class="format-category-image" />
+                            </div>
+                            <h3 class="card-title text-accent">C - Charlie</h3>
+                            <p class="format-subtitle">Developing</p>
+                            <p class="format-description">Developing Category - Emerging clubs building towards
+                                greatness</p>
+                            <div class="format-stat">
+                                <div class="format-stat-number">6</div>
+                                <div class="format-stat-label">Clubs</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card competition-structure">
+                        <h3 class="card-title competition-title">Competition Structure</h3>
+                        <div class="competition-grid">
+                            <div class="competition-item">
+                                <span class="competition-marker">█</span>
+                                <div>
+                                    <strong>Round Robin:</strong> <span class="muted-text"> All clubs within each
+                                        category play each other (Home and Away Basis). Best of three sets will be
+                                        followed throughout the league.</span>
+                                </div>
+                            </div>
+                            <div class="competition-item">
+                                <span class="competition-marker finals">█</span>
+                                <div>
+                                    <strong>Match Format:</strong> <span class="muted-text"> Best of three sets will be held for all matches.</span>
+                                </div>
+                            </div>
+                            <div class="competition-item">
+                                <span class="competition-marker">█</span>
+                                <div>
+                                    <strong>Playoffs:</strong> <span class="muted-text"> Top 4 teams from each category
+                                        advance</span>
+                                </div>
+                            </div>
+                            <div class="competition-item">
+                                <span class="competition-marker">█</span>
+                                <div>
+                                    <strong>Relegation:</strong> <span class="muted-text"> Teams Coming on 5th, 6th place
+                                        of each category will Exit league to next year and new teams will be introduced
+                                        in their place.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <section class="contact-cta">
+                <div class="container contact-cta-container">
+                    <div class="contact-cta-content">
+                        <h2 class="gradient-text">Want to talk to us?</h2>
+                        <p>Questions about clubs, players, sponsorships, or media. We are one click away.</p>
+                    </div>
+                    <div class="contact-cta-action">
+                        <a class="btn btn-primary" href="pages/contact.html">Contact Us</a>
+                        <a class="btn btn-outline" href="pages/about.html">About PPL</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container footer-container">
+                <div class="footer-section footer-about">
+                    <div class="footer-logo-section">
+                        <img src="assets/ppl-logo.png" alt="PPL Logo" class="footer-logo" />
+                        <div>
+                            <h3 class="font-orbitron font-bold glow-text">PPL</h3>
+                            <p class="footer-tagline">Premier Padel League</p>
+                        </div>
+                    </div>
+                    <h3 class="footer-heading">GET IN TOUCH WITH US</h3>
+                    <p class="footer-description">If you have any queries, concerns, or suggestions, please don't hesitate to reach out. Our dedicated customer support team is here to assist you and will respond to your inquiries promptly.</p>
+                </div>
+                
+                <div class="footer-section footer-links">
+                    <h3 class="footer-heading">Policy</h3>
+                    <ul class="footer-menu">
+                        <li><a href="pages/privacy.html">Privacy Policy</a></li>
+                        <li><a href="pages/terms.html">Terms and Conditions</a></li>
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section footer-contact">
+                    <div class="footer-contact-item">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <div>
+                            <h4 class="footer-contact-title">Instagram</h4>
+                            <a href="https://www.instagram.com/premier_padel_league_pk/" target="_blank" rel="noopener noreferrer">premier_padel_league_pk</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-contact-item">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        <div>
+                            <h4 class="footer-contact-title">Facebook</h4>
+                            <a href="https://www.facebook.com/profile.php?id=61583140246523" target="_blank" rel="noopener noreferrer">PPL Official</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-contact-item">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <div>
+                            <h4 class="footer-contact-title">LinkedIn</h4>
+                            <a href="https://www.linkedin.com/company/premier-padel-league-pakistan-tbc" target="_blank" rel="noopener noreferrer">PPL Pakistan</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-contact-item">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                        <div>
+                            <h4 class="footer-contact-title">Email Us</h4>
+                            <a href="mailto:info@premierpadelleague.pk">info@premierpadelleague.pk</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-contact-item">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <div>
+                            <h4 class="footer-contact-title">Phone Number</h4>
+                            <a href="tel:+923460424141">+92 346 0424141</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section footer-social-embed">
+                    <h3 class="footer-heading">Instagram Feed</h3>
+                    <div class="instagram-feed-widget">
+                        <iframe src="https://www.instagram.com/premier_padel_league_pk/embed" width="100%" height="300" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>© 2025 Premier Padel League. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+    
+    <!-- Firebase SDK -->
+    <!-- <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+        // Add other Firebase services as needed
+        // import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        // import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        // import { getStorage } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js";
+
+        // Your web app's Firebase configuration
+        // TODO: Replace with your Firebase project configuration
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID",
+            measurementId: "YOUR_MEASUREMENT_ID"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        // Make Firebase available globally
+        window.firebaseApp = app;
+        window.firebaseAnalytics = analytics;
+        
+        console.log("Firebase initialized successfully");
+    </script> -->
+    
+    <script src="app.js"></script>
+</body>
+
+</html>
