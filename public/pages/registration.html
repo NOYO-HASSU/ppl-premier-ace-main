@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPL Player Registration - Premier Padel League</title>
+    <link rel="icon" type="image/png" href="../assets/ppl-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style_v2.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="logo-container">
+                <img src="../assets/ppl-logo.png" alt="PPL Logo" />
+                <div class="logo-text">
+                    <h1 class="glow-text">PPL</h1>
+                    <p>Premier Padel League</p>
+                </div>
+            </div>
+            <div class="nav-links">
+                <button data-href="../index.html#home">Home<span></span></button>
+                <button data-href="../index.html#club-bidding">Club Bidding<span></span></button>
+                <button data-href="../index.html#registration">Registration<span></span></button>
+                <button data-href="../index.html#format">League Format<span></span></button>
+                <button data-href="../index.html#app">Mobile App<span></span></button>
+                <button data-href="about.html">About<span></span></button>
+                <button data-href="contact.html">Contact<span></span></button>
+            </div>
+            <button id="mobile-menu-button" class="mobile-menu-button btn btn-outline" title="Toggle mobile menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor">
+                    <line x1="4" x2="20" y1="12" y2="12" />
+                    <line x1="4" x2="20" y1="6" y2="6" />
+                    <line x1="4" x2="20" y1="18" y2="18" />
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="mobile-menu container" role="navigation">
+            <div class="flex-col">
+                <button data-href="../index.html#home">Home</button>
+                <button data-href="../index.html#club-bidding">Club Bidding</button>
+                <button data-href="../index.html#registration">Registration</button>
+                <button data-href="../index.html#format">League Format</button>
+                <button data-href="../index.html#app">Mobile App</button>
+                <button data-href="about.html">About</button>
+                <button data-href="contact.html">Contact</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Banner -->
+    <div class="header-banner">
+        <div class="header-content">
+            <h1>PLAYER REGISTRATION</h1>
+            <p>Join Pakistan's Premier Padel League</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="registration-container">
+        <div class="registration-box">
+
+            <!-- Progress Bar -->
+            <div class="progress-section">
+                <div class="progress-bar">
+                    <div class="step-indicator active" id="ind1">1</div>
+                    <div class="step-indicator" id="ind2">2</div>
+                    <div class="step-indicator" id="ind3">3</div>
+                </div>
+                <div class="step-labels">
+                    <div class="step-label">Personal Info</div>
+                    <div class="step-label">Playing Info</div>
+                    <div class="step-label">Documents</div>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">✓</div>
+                <h2>Registration Successful!</h2>
+                <p>Thank you for registering with Premier Padel League. We'll contact you shortly with bidding details.</p>
+                <a href="../index.html" class="btn btn-primary">Back to Home</a>
+            </div>
+
+            <!-- Form -->
+            <form id="registrationForm">
+
+                <!-- Step 1: Personal Information -->
+                <div class="form-step active" id="step1">
+                    <h3>Personal Information</h3>
+
+                    <div class="form-group">
+                        <label>Full Name <span class="required">*</span></label>
+                        <input type="text" name="fullName" placeholder="Enter your full name" required>
+                        <span class="error-message">Full name is required</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>CNIC / Passport No <span class="required">*</span></label>
+                        <input type="text" name="cnicNo" placeholder="e.g., 12345-6789012-3" required>
+                        <span class="error-message">CNIC/Passport number is required</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date of Birth <span class="required">*</span></label>
+                        <div class="date-picker-group">
+                            <select id="dobDay" name="dobDay" required>
+                                <option value="">Day</option>
+                            </select>
+                            <select id="dobMonth" name="dobMonth" required>
+                                <option value="">Month</option>
+                            </select>
+                            <select id="dobYear" name="dobYear" required>
+                                <option value="">Year</option>
+                            </select>
+                        </div>
+                        <input type="hidden" name="dob" id="dob" required>
+                        <span class="error-message">Date of birth is required</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="male" name="gender" value="Male" required>
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="female" name="gender" value="Female" required>
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                        <span class="error-message">Please select a gender</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address <span class="required">*</span></label>
+                        <input type="email" name="email" placeholder="your.email@example.com" required>
+                        <span class="error-message">Valid email is required</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mobile Number <span class="required">*</span></label>
+                        <input type="tel" name="mobile" placeholder="+92 300 1234567" required>
+                        <span class="error-message">Mobile number is required</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Residential Address <span class="required">*</span></label>
+                        <textarea name="address" placeholder="Enter your complete residential address" rows="3" required></textarea>
+                        <span class="error-message">Address is required</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>City <span class="required">*</span></label>
+                        <select name="city" required>
+                            <option value="">Select City</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Karachi">Karachi</option>
+                        </select>
+                        <span class="error-message">Please select a city</span>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn-primary" onclick="nextStep(2)">Next Step →</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Playing Information -->
+                <div class="form-step" id="step2">
+                    <h3>Playing Information</h3>
+
+                    <div class="form-group">
+                        <label>Playing Hand <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="rightHand" name="playingRole" value="Right Hand" required>
+                                <label for="rightHand">Right Hand</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="leftHand" name="playingRole" value="Left Hand" required>
+                                <label for="leftHand">Left Hand</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Position <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="forehand" name="position" value="Forehand" required>
+                                <label for="forehand">Forehand</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="backhand" name="position" value="Backhand" required>
+                                <label for="backhand">Backhand</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Years of Playing Experience <span class="required">*</span></label>
+                        <input type="text" name="experience" placeholder="e.g., 3 years" required>
+                        <span class="error-message">Playing experience is required</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Club / Academy</label>
+                        <input type="text" name="club" placeholder="Enter your current club (optional)">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Highest Level Played <span class="required">*</span></label>
+                        <select name="level" required>
+                            <option value="">Select Level</option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                            <option value="Professional">Professional</option>
+                        </select>
+                        <span class="error-message">Please select a level</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Available for Full League Duration? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="avYes" name="fullDuration" value="Yes" required>
+                                <label for="avYes">Yes</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="avNo" name="fullDuration" value="No" required>
+                                <label for="avNo">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn-secondary" onclick="nextStep(1)">← Back</button>
+                        <button type="button" class="btn-primary" onclick="nextStep(3)">Next Step →</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Documents & Health -->
+                <div class="form-step" id="step3">
+                    <h3>Documents & Health Information</h3>
+
+                    <div class="section-title">Health & Medical</div>
+
+                    <div class="form-group">
+                        <label>Medical Condition / Injury History? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="medYes" name="medicalHistory" value="Yes" required onchange="toggleMedicalField()">
+                                <label for="medYes">Yes</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="medNo" name="medicalHistory" value="No" required onchange="toggleMedicalField()">
+                                <label for="medNo">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="medicalSpecifyGroup" style="display: none;">
+                        <label>Please Specify</label>
+                        <textarea name="medicalSpecify" placeholder="Describe any medical conditions or injuries" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fitness Level <span class="required">*</span></label>
+                        <select name="fitnessLevel" required>
+                            <option value="">Select Fitness Level</option>
+                            <option value="Excellent">Excellent</option>
+                            <option value="Good">Good</option>
+                            <option value="Average">Average</option>
+                        </select>
+                        <span class="error-message">Please select fitness level</span>
+                    </div>
+
+                    <div class="section-title">Required Documents</div>
+                    <p style="color: var(--muted-foreground); font-size: 0.9rem; margin-bottom: 1.5rem;">Registration Fee: PKR 5,000 | Maximum file size: 5MB each | <strong style="color: var(--primary);">All files must be in image format (JPG, PNG, etc.)</strong></p>
+
+                    <div class="form-group">
+                        <label>Payment Receipt <span class="required">*</span></label>
+                        <div class="file-upload-area" id="paymentFileArea" onclick="document.getElementById('paymentFile').click();" ondrop="handleDrop(event, 'paymentFile')" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+                            <div class="upload-placeholder">
+                                <div class="file-upload-icon">📄</div>
+                                <p>Click to upload or drag and drop</p>
+                            </div>
+                            <div class="file-preview" id="paymentFilePreview">
+                                <div class="file-preview-content">
+                                    <img class="file-preview-img" id="paymentFileImg" alt="Preview">
+                                    <div class="file-preview-info">
+                                        <div class="file-preview-name" id="paymentFileName">-</div>
+                                        <div class="file-preview-size" id="paymentFileSize">-</div>
+                                    </div>
+                                    <button type="button" class="file-preview-remove" onclick="removeFile('paymentFile')">Remove</button>
+                                </div>
+                            </div>
+                            <input type="file" id="paymentFile" name="paymentFile" accept="image/*" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>CNIC/Passport Copy <span class="required">*</span></label>
+                        <div class="file-upload-area" id="cnicFileArea" onclick="document.getElementById('cnicFile').click();" ondrop="handleDrop(event, 'cnicFile')" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+                            <div class="upload-placeholder">
+                                <div class="file-upload-icon">📋</div>
+                                <p>Click to upload or drag and drop</p>
+                            </div>
+                            <div class="file-preview" id="cnicFilePreview">
+                                <div class="file-preview-content">
+                                    <img class="file-preview-img" id="cnicFileImg" alt="Preview">
+                                    <div class="file-preview-info">
+                                        <div class="file-preview-name" id="cnicFileName">-</div>
+                                        <div class="file-preview-size" id="cnicFileSize">-</div>
+                                    </div>
+                                    <button type="button" class="file-preview-remove" onclick="removeFile('cnicFile')">Remove</button>
+                                </div>
+                            </div>
+                            <input type="file" id="cnicFile" name="cnicFile" accept="image/*" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Portrait Photograph <span class="required">*</span></label>
+                        <p class="upload-note">⚠ This picture will be used on all occasions e.g. Player Cards, Website Profile, etc.</p>
+                        <div class="file-upload-area" id="photoFileArea" onclick="document.getElementById('photoFile').click();" ondrop="handleDrop(event, 'photoFile')" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+                            <div class="upload-placeholder">
+                                <div class="file-upload-icon">📸</div>
+                                <p>Click to upload or drag and drop</p>
+                            </div>
+                            <div class="file-preview" id="photoFilePreview">
+                                <div class="file-preview-content">
+                                    <img class="file-preview-img" id="photoFileImg" alt="Preview">
+                                    <div class="file-preview-info">
+                                        <div class="file-preview-name" id="photoFileName">-</div>
+                                        <div class="file-preview-size" id="photoFileSize">-</div>
+                                    </div>
+                                    <button type="button" class="file-preview-remove" onclick="removeFile('photoFile')">Remove</button>
+                                </div>
+                            </div>
+                            <input type="file" id="photoFile" name="photoFile" accept="image/*" required>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn-secondary" onclick="nextStep(2)">← Back</button>
+                        <button type="submit" class="btn-primary" onclick="submitForm(event)">Submit Registration</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Custom Dialog -->
+    <div class="dialog-overlay" id="dialogOverlay">
+        <div class="dialog-box">
+            <div class="dialog-header">
+                <div class="dialog-icon" id="dialogIcon">ℹ️</div>
+                <h3 class="dialog-title" id="dialogTitle">Notification</h3>
+            </div>
+            <p class="dialog-message" id="dialogMessage"></p>
+            <div class="dialog-buttons">
+                <button class="dialog-btn dialog-btn-primary" onclick="closeDialog()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loader-overlay" id="loaderOverlay">
+        <div class="spinner"></div>
+        <p class="loader-text">Processing your registration...</p>
+        <p class="loader-text" style="font-size: 0.9rem; color: var(--muted-foreground); margin-top: 1rem; max-width: 80%;">This may take about 15 seconds. Please keep this Browser open & Do Not Refresh the Page.</p>
+    </div>
+
+    <script>
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyRXhRMPwlAmWLNG5FHoVsgVbkAoVkz5xSoR4WiM1-AbZzlSGWOv98L1SoFQyY9PIuQ/exec";
+
+        // Custom Dialog Functions
+        function showDialog(title, message, type = 'info') {
+            const overlay = document.getElementById('dialogOverlay');
+            const icon = document.getElementById('dialogIcon');
+            const titleEl = document.getElementById('dialogTitle');
+            const messageEl = document.getElementById('dialogMessage');
+
+            // Set icon based on type
+            if (type === 'error') {
+                icon.textContent = '⚠️';
+                icon.className = 'dialog-icon error';
+            } else if (type === 'success') {
+                icon.textContent = '✓';
+                icon.className = 'dialog-icon success';
+            } else {
+                icon.textContent = 'ℹ️';
+                icon.className = 'dialog-icon info';
+            }
+
+            titleEl.textContent = title;
+            messageEl.innerHTML = message;
+            overlay.classList.add('active');
+        }
+
+        function closeDialog() {
+            document.getElementById('dialogOverlay').classList.remove('active');
+        }
+
+        // Step Navigation
+        function nextStep(step) {
+            const form = document.getElementById('registrationForm');
+            const currentStep = document.querySelector('.form-step.active');
+            const inputs = currentStep.querySelectorAll('input[required], select[required], textarea[required]');
+            
+            let isValid = true;
+            let missingFields = [];
+            
+            inputs.forEach(input => {
+                if (input.type === 'radio') {
+                    const radioGroup = form.querySelectorAll(`input[name="${input.name}"]`);
+                    const isChecked = Array.from(radioGroup).some(r => r.checked);
+                    if (!isChecked) {
+                        isValid = false;
+                        const label = input.closest('.form-group').querySelector('label');
+                        if (label) missingFields.push(label.textContent.replace('*', '').trim());
+                    }
+                } else if (input.type === 'file') {
+                    if (!input.files.length) {
+                        isValid = false;
+                        const label = input.closest('.form-group').querySelector('label');
+                        if (label) missingFields.push(label.textContent.replace('*', '').trim());
+                    }
+                } else if (!input.value.trim()) {
+                    isValid = false;
+                    const label = input.closest('.form-group').querySelector('label');
+                    if (label) missingFields.push(label.textContent.replace('*', '').trim());
+                }
+            });
+
+            if (!isValid) {
+                showDialog('Required Fields Missing', 'Please fill in all required fields:<br><br>• ' + missingFields.join('<br>• '), 'error');
+                return;
+            }
+
+            showStep(step);
+        }
+
+        function showStep(step) {
+            document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+            document.getElementById('step' + step).classList.add('active');
+
+            document.querySelectorAll('.step-indicator').forEach((ind, index) => {
+                if (index + 1 <= step) {
+                    ind.classList.add('active');
+                } else {
+                    ind.classList.remove('active');
+                }
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // File Upload Handlers
+        function handleDrop(e, fileId) {
+            e.preventDefault();
+            e.stopPropagation();
+            const target = e.currentTarget;
+            target.classList.remove('dragover');
+
+            const files = e.dataTransfer.files;
+            if (files.length) {
+                document.getElementById(fileId).files = files;
+                updateFileName(fileId);
+            }
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.currentTarget.classList.add('dragover');
+        }
+
+        function handleDragLeave(e) {
+            e.currentTarget.classList.remove('dragover');
+        }
+
+        function updateFileName(fileId) {
+            const input = document.getElementById(fileId);
+            const uploadArea = document.getElementById(fileId + 'Area');
+            const preview = document.getElementById(fileId + 'Preview');
+            const previewImg = document.getElementById(fileId + 'Img');
+            const previewName = document.getElementById(fileId + 'Name');
+            const previewSize = document.getElementById(fileId + 'Size');
+            
+            if (input.files.length) {
+                const file = input.files[0];
+                
+                // Validate file type
+                if (!file.type.startsWith('image/')) {
+                    showDialog('Invalid File Type', 'Please upload an image file (JPG, PNG, etc.)', 'error');
+                    input.value = '';
+                    return;
+                }
+
+                // Validate file size (5MB)
+                if (file.size > 5 * 1024 * 1024) {
+                    showDialog('File Too Large', 'File size must be less than 5MB', 'error');
+                    input.value = '';
+                    return;
+                }
+
+                // Show preview inside upload area
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    previewImg.src = e.target.result;
+                    previewName.textContent = file.name;
+                    previewSize.textContent = (file.size / 1024).toFixed(2) + ' KB';
+                    uploadArea.classList.add('has-file');
+                    preview.classList.add('active');
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function removeFile(fileId) {
+            const input = document.getElementById(fileId);
+            const uploadArea = document.getElementById(fileId + 'Area');
+            const preview = document.getElementById(fileId + 'Preview');
+            input.value = '';
+            uploadArea.classList.remove('has-file');
+            preview.classList.remove('active');
+        }
+
+        // Setup file input listeners
+        ['paymentFile', 'cnicFile', 'photoFile'].forEach(fileId => {
+            document.getElementById(fileId).addEventListener('change', () => updateFileName(fileId));
+        });
+
+        // Initialize Custom Date Picker
+        function initializeDatePicker() {
+            const daySelect = document.getElementById('dobDay');
+            const monthSelect = document.getElementById('dobMonth');
+            const yearSelect = document.getElementById('dobYear');
+            const hiddenInput = document.getElementById('dob');
+
+            // Populate days (1-31)
+            for (let i = 1; i <= 31; i++) {
+                const option = document.createElement('option');
+                option.value = i.toString().padStart(2, '0');
+                option.textContent = i;
+                daySelect.appendChild(option);
+            }
+
+            // Populate months
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            months.forEach((month, index) => {
+                const option = document.createElement('option');
+                option.value = (index + 1).toString().padStart(2, '0');
+                option.textContent = month;
+                monthSelect.appendChild(option);
+            });
+
+            // Populate years (current year - 80 to current year - 10)
+            const currentYear = new Date().getFullYear();
+            for (let i = currentYear - 10; i >= currentYear - 80; i--) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = i;
+                yearSelect.appendChild(option);
+            }
+
+            // Update hidden input when date changes
+            function updateDateValue() {
+                const day = daySelect.value;
+                const month = monthSelect.value;
+                const year = yearSelect.value;
+
+                if (day && month && year) {
+                    hiddenInput.value = `${year}-${month}-${day}`;
+                } else {
+                    hiddenInput.value = '';
+                }
+            }
+
+            daySelect.addEventListener('change', updateDateValue);
+            monthSelect.addEventListener('change', updateDateValue);
+            yearSelect.addEventListener('change', updateDateValue);
+        }
+
+        // Initialize date picker on page load
+        initializeDatePicker();
+
+        // Toggle Medical Field
+        function toggleMedicalField() {
+            const isMedYes = document.getElementById('medYes').checked;
+            document.getElementById('medicalSpecifyGroup').style.display = isMedYes ? 'block' : 'none';
+        }
+
+        // File Processing (Images only)
+        const processFile = (file) => {
+            return new Promise((resolve, reject) => {
+                if (!file.type.startsWith('image/')) {
+                    reject(new Error('Only image files are allowed'));
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = (event) => {
+                    const img = new Image();
+                    img.src = event.target.result;
+                    img.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        const MAX_WIDTH = 1000;
+                        const MAX_HEIGHT = 1000;
+                        let width = img.width;
+                        let height = img.height;
+
+                        if (width > height) {
+                            if (width > MAX_WIDTH) {
+                                height *= MAX_WIDTH / width;
+                                width = MAX_WIDTH;
+                            }
+                        } else {
+                            if (height > MAX_HEIGHT) {
+                                width *= MAX_HEIGHT / height;
+                                height = MAX_HEIGHT;
+                            }
+                        }
+
+                        canvas.width = width;
+                        canvas.height = height;
+                        const ctx = canvas.getContext('2d');
+                        ctx.drawImage(img, 0, 0, width, height);
+
+                        const dataUrl = canvas.toDataURL('image/jpeg', 0.7);
+                        resolve({
+                            base64: dataUrl.split(',')[1],
+                            type: 'image/jpeg',
+                            name: file.name.replace(/\.[^/.]+$/, "") + ".jpg"
+                        });
+                    };
+                };
+                reader.onerror = error => reject(error);
+            });
+        };
+
+        // Form Submission
+        async function submitForm(e) {
+            e.preventDefault();
+
+            const form = document.getElementById('registrationForm');
+            if (!form.checkValidity()) {
+                showDialog('Form Incomplete', 'Please fill in all required fields', 'error');
+                return;
+            }
+
+            const loader = document.getElementById('loaderOverlay');
+            loader.classList.add('active');
+
+            try {
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+
+                const files = ['paymentFile', 'cnicFile', 'photoFile'];
+                for (const fileId of files) {
+                    const input = document.getElementById(fileId).files[0];
+                    if (input) {
+                        const fileObj = await processFile(input);
+                        data[fileId] = fileObj.base64;
+                        data[fileId.replace('File', 'Name')] = fileObj.name;
+                        data[fileId + 'Type'] = fileObj.type;
+                    }
+                }
+
+                const response = await fetch(SCRIPT_URL, {
+                    method: "POST",
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+                loader.classList.remove('active');
+
+                if (result.status === 'success') {
+                    document.getElementById('registrationForm').style.display = 'none';
+                    document.getElementById('successMessage').classList.add('active');
+                } else {
+                    showDialog(
+                        'Registration Error',
+                        'System could not process your request.<br><br>Please contact the admin:<br><br><strong>Email:</strong> hassaananjum155@gmail.com<br><strong>Phone:</strong> 03430678388',
+                        'error'
+                    );
+                }
+
+            } catch (error) {
+                console.error(error);
+                loader.classList.remove('active');
+                showDialog(
+                    'Connection Error',
+                    'System could not process your request.<br><br>Please contact the admin:<br><br><strong>Email:</strong> hassaananjum155@gmail.com<br><strong>Phone:</strong> 03430678388',
+                    'error'
+                );
+            }
+        }
+    </script>
+
+    <script src="../app.js"></script>
+</body>
+</html>
