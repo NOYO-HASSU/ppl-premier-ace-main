@@ -199,6 +199,14 @@ section {
     backdrop-filter: blur(12px);
     border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
 }
+
+@media (max-width: 1024px) {
+    .navbar.scrolled {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        background-color: rgba(0, 0, 0, 0.88);
+    }
+}
 .navbar-container {
     display: flex;
     align-items: center;
@@ -320,6 +328,20 @@ section {
     height: 100%;
     object-fit: cover;
     z-index: -2;
+}
+
+.hero-video-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hero-video-desktop {
+        display: none;
+    }
+    
+    .hero-video-mobile {
+        display: block;
+    }
 }
 
 .hero-overlay {
@@ -475,6 +497,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    content-visibility: auto;
+    contain-intrinsic-size: 260px;
 }
 
 .featured-sponsors-container {
@@ -540,6 +564,8 @@ section {
     padding: 1.5rem 0;
     background: linear-gradient(180deg, hsla(220, 30%, 5%, 0.8), hsla(220, 25%, 8%, 0.9));
     overflow: hidden;
+    content-visibility: auto;
+    contain-intrinsic-size: 220px;
 }
 
 .sponsor-banner {
@@ -577,21 +603,51 @@ section {
     animation: scroll-left 50s linear infinite;
     width: fit-content;
     will-change: transform;
+    transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
+}
+
+body.is-scrolling .sponsor-track {
+    animation-play-state: paused;
 }
 
 .sponsor-track img {
     height: 60px;
     width: auto;
     object-fit: contain;
-    filter: grayscale(100%) brightness(0.8);
+    filter: grayscale(90%);
     flex-shrink: 0;
     transition: filter 0.3s ease;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 .sponsor-track img:hover {
     filter: grayscale(0%) brightness(1);
+}
+
+@media (max-width: 1024px) {
+    .sponsor-track img {
+        filter: none;
+        transition: none;
+    }
+
+    .sponsor-track img:hover {
+        filter: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sponsor-track {
+        animation: none;
+    }
+
+    .featured-sponsor-item,
+    .featured-sponsor-logo,
+    .sponsor-track img {
+        transition: none;
+    }
 }
 
 @keyframes scroll-left {
@@ -884,6 +940,53 @@ section {
 }
 
 /* --- Registration Section --- */
+.notice-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, hsla(45, 100%, 60%, 0.25), hsla(175, 70%, 55%, 0.15));
+    border: 1px solid hsla(45, 100%, 60%, 0.4);
+    color: var(--secondary);
+}
+
+.format-note {
+    margin-top: 0.6rem;
+    font-weight: 600;
+    color: hsla(120, 100%, 95%, 0.9);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.registration-note {
+    margin: 0.75rem 0 0.5rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.6rem;
+    background: hsla(45, 100%, 60%, 0.12);
+    border: 1px solid hsla(45, 100%, 60%, 0.25);
+    color: var(--foreground);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.registration-note-vertical {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.registration-note-vertical .notice-badge {
+    margin-bottom: 0.1rem;
+}
+
 .registration-card {
     display: flex;
     flex-direction: column;
@@ -1934,44 +2037,6 @@ section {
     }
 }
 
-/* --- Scroll to Top Button --- */
-.scroll-to-top {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 3rem;
-    height: 3rem;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    border: 2px solid var(--primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-}
-
-.scroll-to-top:hover,
-.scroll-to-top:active {
-    transform: translateY(-5px);
-}
-
-.scroll-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
-.scroll-to-top svg {
-    color: var(--background);
-    stroke-width: 3;
-}
 
 /* --- Footer --- */
 .footer {
@@ -2472,20 +2537,6 @@ section {
         width: 100%;
     }
     
-    /* Scroll to top button - mobile - ensure it stays fixed */
-    .scroll-to-top {
-        position: fixed !important;
-        bottom: 1rem !important;
-        right: 1rem !important;
-        width: 2.5rem;
-        height: 2.5rem;
-        z-index: 1000 !important;
-    }
-    
-    .scroll-to-top svg {
-        width: 20px;
-        height: 20px;
-    }
 }
 
 /* --- PPL Category A Winners Go Global Section --- */

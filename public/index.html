@@ -74,10 +74,9 @@
         </nav>
         <main>
             <section id="home" class="hero-section">
-                <!-- Video Background -->
-                <video class="hero-video" autoplay muted playsinline loop preload="metadata">
-                    <source src="assets/videos/header_video.mp4" type="video/mp4">
-                </video>
+                <!-- SVG Background -->
+                <img src="assets/background.svg" alt="Background" class="hero-video hero-video-desktop">
+                <img src="assets/background-vertical.svg" alt="Background" class="hero-video hero-video-mobile">
                 <div class="hero-overlay"></div>
                 
 
@@ -110,7 +109,7 @@
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat-item">
-                            <div class="stat-number gradient-text">300+</div>
+                            <div class="stat-number gradient-text">400+</div>
                             <div class="stat-label">Registered Players</div>
                         </div>
                     </div>
@@ -274,7 +273,7 @@
                                 <h4 class="card-title">Player Registration</h4>
                             </div>
                             <div class="card-content">
-                                <p>Open to players aged 16+. Registration requires CNIC, contact info. Fee: PKR 5,000 (non-refundable). Selected players receive monthly engagement and travel allowances.</p>
+                                <p>Open to players Male/Female aged 16+. Registration requires CNIC, contact info. Fee: PKR 5,000 (non-refundable). Selected players receive monthly engagement and travel allowances.</p>
                             </div>
                         </div>
 
@@ -384,11 +383,10 @@
                             
                             <div class="feature-item">
                                 <div class="feature-icon-wrapper">
-                                    <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="1"></circle>
-                                        <circle cx="19" cy="12" r="1"></circle>
-                                        <circle cx="5" cy="12" r="1"></circle>
-                                        <path d="M12 2v4m0 8v4m7-7h4m-8 0h4m-8 0h4"></path>
+                                    <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                                        <path d="M16 10a4 4 0 0 1-8 0"></path>
                                     </svg>
                                 </div>
                                 <div class="feature-content">
@@ -426,6 +424,7 @@
                             </div>
                             <div class="card-content">
                                 <p>Register yourself as a player for the Premier Padel League bidding process. Open to players aged 16+ with a registration fee of PKR 5,000.</p>
+                                <div class="registration-note registration-note-vertical"><span class="notice-badge">Categories:</span><span>CAT - Alpha<br>CAT - Bravo<br>CAT - Charlie<br>Womens Category</span></div>
                                 <ul>
                                     <li>Age 16+ with valid CNIC</li>
                                     <li>Contact information</li>
@@ -538,6 +537,7 @@
                     <div class="section-header">
                         <h2 class="gradient-text">League Format</h2>
                         <p>Three competitive categories, 18 clubs, one ultimate champion</p>
+                        <p class="format-note"><span class="notice-badge">Update</span> The Women's Category is now officially open for Lahore and Karachi.</p>
                     </div>
                     <div class="grid grid-lg-3">
                         <div class="card format-card format-alpha">
@@ -712,12 +712,6 @@
             </div>
         </footer>
     </div>
-    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="18 15 12 9 6 15"></polyline>
-        </svg>
-    </button>
-    
     <!-- Firebase SDK -->
     <!-- <script type="module">
         // Import the functions you need from the SDKs you need

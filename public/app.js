@@ -8,22 +8,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Throttle scroll handler for better performance
     let scrollTimeout;
+    let scrollingClassTimeout;
+
+    const markScrolling = () => {
+        document.body.classList.add('is-scrolling');
+        clearTimeout(scrollingClassTimeout);
+        scrollingClassTimeout = setTimeout(() => {
+            document.body.classList.remove('is-scrolling');
+        }, 120);
+    };
+
     const handleScroll = () => {
+        markScrolling();
+
         if (window.scrollY > 20) {
             nav.classList.add('scrolled');
         } else {
             nav.classList.remove('scrolled');
         }
         
-        // Scroll to top button visibility
-        const scrollToTopBtn = document.getElementById('scroll-to-top');
-        if (scrollToTopBtn) {
-            if (window.scrollY > 300) {
-                scrollToTopBtn.classList.add('visible');
-            } else {
-                scrollToTopBtn.classList.remove('visible');
-            }
-        }
     };
 
     // Navbar scroll effect with passive listener
@@ -61,14 +64,4 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
     
-    // Scroll to top button functionality
-    const scrollToTopBtn = document.getElementById('scroll-to-top');
-    if (scrollToTopBtn) {
-        scrollToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
 });
